@@ -1,0 +1,249 @@
+body {
+    margin: 0;
+    background-color: #100F10;
+
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+#primeiroH1 {
+    /* border: white solid 3px; */
+    font-size: 2.8vw;
+}
+
+.header {
+    /* border: solid 3px orchid; */
+    height: 110px;
+ 
+}
+
+.header .container {
+    /* border: solid 3px rgb(75, 8, 52); */
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+
+}
+
+.banner {
+    /* border: solid 3px rgb(8, 75, 11); */
+    height: 660px;
+    width: auto;
+    background-image: url(../imgs/banner.png);
+    background-attachment: fixed;
+
+}
+
+#arte {
+    /* border: solid 3px rgb(112, 218, 213); */
+    color: white;
+    padding: 18% 12% 18% 12%;
+    text-align: center;
+    font-size: 2.5vw;
+}
+
+.header {
+    /* border: solid 3px rgb(75, 8, 16); */
+    background: linear-gradient(to bottom, #00ffee5f, #ffffff00);
+    display: flex;
+    color: white;
+}
+
+.ref {
+
+    color: white;
+    text-decoration: none;
+}
+
+#aqui {
+    color: #00FFF0;
+}
+
+ul {
+    /* border: solid 3px rgb(18, 75, 8); */
+    align-items: center;
+    width: 30%;
+    padding: 0;
+    justify-content: space-between;
+    display: flex;
+    list-style: none;
+}
+
+li {
+    /* border: solid 3px rgb(75, 37, 8); */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5vw;
+    padding: 5px;
+}
+
+/*//////////////////////////////// conteudo /////////////////////////*/
+
+.conteudo {
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+}
+
+.conteudo .container {
+    /* border: solid 3px white; */
+    display: flex;
+    height: auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.conteudo .historia {
+    /* border: solid 3px indigo; */
+    width: 40%;
+    height: 40%;
+}
+
+.historia p {
+    /* border: solid 3px tomato; */
+    text-align: justify;
+    color: white;
+    font-size: 1.8vw;
+
+}
+
+.historia button {
+    text-align: center;
+    border: #00ffee82;
+    color: #100F10;
+    font-size: 1.4vw;
+    width: 34%;
+    background-color: #00ffee82;
+    border-radius: 15px;
+
+
+}
+
+.conteudo img {
+    /* border: solid 3px rgb(91, 130, 0); */
+    width: 40%;
+    height: 100%;
+
+}
+
+/*///////////////////////////////////// vanGogh///////////////////////////////////*/
+
+
+.vanGogh .container{
+    /* border: solid rgb(255, 255, 255) 3px; */
+    border-radius: 20px;
+    background-color: #44e0d633;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    padding-top: 4%;
+    padding-bottom: 4%; 
+    margin-bottom: 100px;
+    
+    
+}
+
+.vanGogh_historiac {
+    /* border: solid rgb(95, 38, 0) 3px; */
+    text-align: center;
+    justify-items: center;
+    margin: 0 15vw 0 1vw;
+    justify-content: space-around;
+   padding: 4% 0 4% 0;
+    
+
+}
+
+.vanGogh_historiac h1 {
+    /* border: solid rgb(239, 162, 112) 3px; */
+    font-size: 2.8vw;
+}
+
+.vanGogh img {
+    /* border: solid rgb(95, 38, 0) 3px; */
+    width: 28%;
+    height: 100%;
+    margin: 0 1vw 0 15vw;
+    
+    
+}
+.vanGogh_historiac p {
+    /* border: solid rgb(95, 38, 0) 3px; */
+    font-size: 2vw;
+}
+
+.vanGogh_historiac button {
+    /* border: solid rgb(254, 114, 20) 3px; */
+    text-align: center;
+    border: white 1px solid;
+    color: white;
+    font-size: 1.4vw;
+    width: 54%;
+    background-color: #5ae7dd00;
+    border-radius: 15px;
+    
+
+}
+
+
+/*/////////////////////////////// obras /////////////////////*/
+ .obras .container{
+    /* border: #00FFF0 solid 3px; */
+}
+
+.imagens_obras{
+    /* border: solid 3px indigo; */
+    display: flex;
+    justify-content: space-around;
+    padding-top: 3%;
+    padding-bottom: 0.5%;
+   
+ }
+
+ .imagens_obras img{
+    width: 98%;
+    
+ }
+
+.texto{
+    /* border: solid rgb(77, 255, 0) 3px; */
+    color: white;
+    width: 80%;
+    font-size: 1.3vw;
+
+}
+
+.legenda{
+    /* border: solid lavenderblush 3px; */
+    /* padding: 0 0 0 4%; */
+}
+
+
+/*//////////////////////// somos ///////////////////////////////*/
+
+.somos{
+    border: salmon solid 3px;
+}
+.somos .container{
+    border: rgb(255, 255, 255) solid 3px;
+    height: 400px;
+}
+
+/*//////////////////////////// footer //////////////////*/
+
+.footer{
+    border: rgb(255, 238, 2) solid 3px;
+    background: #00ffee5f;
+    height: 110px;
+}
+.footer .container{
+    border: rgb(0, 0, 0) solid 3px;
+    height: 110px;
+   
+}
+
+
+
+ 

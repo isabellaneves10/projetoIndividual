@@ -1,0 +1,58 @@
+
+body{
+    margin: 0;
+    background-color: black;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+#arte{
+    color: white;
+    padding: 90px;
+    text-align: center;
+    }
+
+.header{
+height: 110px;
+background-image: linear-gradient(to top , #00000000 , #000000);
+}
+
+.header .container{
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+}
+.banner{
+    height: 660px;
+    background-image: url(../imgs/banner.index.png);
+}
+
+.header{
+    display: flex;
+    color: white;
+}
+
+.ref{
+
+    color: white;
+    text-decoration: none;
+}
+
+#aqui{
+    color: #00FFF0;
+}
+ul {
+    align-items: center;
+    width: 40%;
+    justify-content: space-around;
+    display: flex;
+    list-style: none;
+}
+
+li{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    padding: 5px;
+}
