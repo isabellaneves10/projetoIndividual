@@ -17,7 +17,7 @@ body {
 .header {
     /* border: solid 3px orchid; */
     height: 110px;
- 
+
 }
 
 .header .container {
@@ -37,16 +37,17 @@ body {
     color: white;
 }
 
-#conta{
+#conta {
     /* border: #00ffee40 solid 1px; */
     color: #100F10;
-    background:#00ffeea4;
+    background: #00ffeea4;
     border-radius: 20px;
     padding: 2% 10%;
     text-decoration: none;
     width: 40%;
-   
+
 }
+
 .ref {
     color: white;
     text-decoration: none;
@@ -60,7 +61,7 @@ body {
 ul {
     /* border: solid 3px rgb(18, 75, 8); */
     align-items: center;
-    width: 48%;
+    width: 28%;
     padding: 0;
     justify-content: space-between;
     display: flex;
@@ -73,7 +74,7 @@ li {
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.5vw;
     padding: 5px;
-    width: 50%;
+    width: 100%;
     text-align: center;
     transition: all .2s;
 }
@@ -81,152 +82,66 @@ li {
 li:hover {
     transform: scale(1.1);
 }
-   
 
 
-
-/*/////////////////////////////// form ///////////////////*/
-.cadastro .container{
-    /* border: solid 3px rgb(41, 193, 46); */
+/*////////////////////////// canvas ///////////////////////*/
+.canvas {
+    /* border: solid 3px orange; */
+    margin-top: 6%; 
     display: flex;
-    height: auto;
-   
-}
-.gif{
-    /* border: solid 3px rgb(118, 120, 255); */
-    height: 35vw;
-    position: relative;
-    width: 100%;
-}
-
-.gif2 img{
-    width:100%;
-    height: 100%;
-    border-radius:20px;
-}
-.gif1 img{
-    width:100%;
-    height: 100%;
-    border-radius:20px;
-}
-
-.gif1{
-    /* border: solid 3px rgb(240, 29, 29); */
-    position: absolute;
-    margin-top: 10vw;
-    margin-left: 8vw;
-    width:66%;
-    height: 62%;
-}
-
-.gif2{
-    /* border: solid 3px rgb(0, 8, 255); */
-    position: absolute;
-    margin-top: 2vw;
-    width:62%;
-    height: 68%;
-}
-
-
-.form{
-    /* border: white solid 1px; */
-    width: 70%;
-    height: 80%;
-    color: white;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    display: flex;
+} 
+.canvas h1{
+    width: auto;
+    /* border: solid 3px orange; */
+    color: white;
     
-}
+} 
 
-input::placeholder {
-    font-size:1.4vw;
-    color: white;
-    padding: 2% 6% 2%;
-}
-
-.form h1{
-    font-size: 3vw;
-
-}
-
-.inputs{
-    /* border: solid teal 3px; */
-    /* justify-content: space-around; */
+ .canvas .container {
+    /* border: solid 3px darkblue; */
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    height: 50%;
-    padding: 2%;
+    width: 800px;
+   
 }
 
-.input{
-    border: solid 1px #00FFF0 ;
-    color: white;
-    display: flex;
-    border-radius: 15px;
-    height: 3vw;
-    width: 70%;
-    margin: 2.6%;
-    background-color: rgba(255, 255, 255, 0);
-    transition: all .3s;
-}
+#tela {
+    border: solid 6px #00ffee;
+    background-color: white;
+    width: 800px;
+    height: 450px;
+    
 
-.form button{
-    background-color: #00ffeeb5;
-    border-radius: 12px;
-    width: 9vw;
-    height: 3vw;
-    font-size: 1.5vw;
-    transition: all .2s;
-}
-
-button:hover {
-    transform: scale(1.1);
-}
-.input:hover {
-    transform: scale(1.1);
 }
 
 /*//////////////////////////// footer //////////////////*/
 
-.footer{
+.footer {
     /* border: rgb(255, 238, 2) solid 3px; */
     background: linear-gradient(to bottom, #00ffee30, #00ffee0c);
     height: 110px;
-    
+
 }
-.footer .container{
+
+.footer .container {
     /* border: rgb(0, 0, 0) solid 3px; */
     height: 110px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 6%;
-    
+
 }
 
-.footer h2{
+.footer h2 {
     /* border: solid 3px indianred; */
     padding-top: 2%;
     margin: 0%;
 }
-.footer p{
+
+.footer p {
     padding-bottom: 1%;
     /* border: solid 3px indianred; */
     margin: 1%;
 }
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,59 +1,236 @@
-
-body{
+body {
     margin: 0;
-    background-color: black;
+    background-color: #100F10;
+
 }
-.container{
+
+.container {
     width: 80%;
     margin: auto;
 }
 
-#arte{
-    color: white;
-    padding: 90px;
-    text-align: center;
-    }
-
-.header{
-height: 110px;
-background-image: linear-gradient(to top , #00000000 , #000000);
+#primeiroH1 {
+    /* border: white solid 3px; */
+    font-size: 2.8vw;
 }
 
-.header .container{
+.header {
+    /* border: solid 3px orchid; */
+    height: 110px;
+ 
+}
+
+.header .container {
+    /* border: solid 3px rgb(199, 17, 135); */
     display: flex;
     height: auto;
     justify-content: space-between;
-}
-.banner{
-    height: 660px;
-    background-image: url(../imgs/banner.index.png);
+
 }
 
-.header{
+
+.header {
+    /* border: solid 3px rgb(75, 8, 16); */
+    background: linear-gradient(to bottom, #00ffee30, #ffffff00);
     display: flex;
+    align-items: center;
     color: white;
 }
 
-.ref{
-
+#conta{
+    /* border: #00ffee40 solid 1px; */
+    color: #100F10;
+    background:#00ffeea4;
+    border-radius: 20px;
+    padding: 2% 10%;
+    text-decoration: none;
+    width: 40%;
+   
+}
+.ref {
     color: white;
     text-decoration: none;
 }
 
-#aqui{
-    color: #00FFF0;
+
+#aqui {
+    color: #00ffee30;
 }
+
 ul {
+    /* border: solid 3px rgb(18, 75, 8); */
     align-items: center;
-    width: 40%;
-    justify-content: space-around;
+    width: 48%;
+    padding: 0;
+    justify-content: space-between;
     display: flex;
     list-style: none;
 }
 
-li{
+li {
+    /* border: solid 3px rgb(75, 37, 8); */
+    align-items: center;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
+    font-size: 1.5vw;
     padding: 5px;
+    width: 50%;
+    text-align: center;
+    transition: all .2s;
 }
+
+li:hover {
+    transform: scale(1.1);
+}
+   
+
+
+
+/*/////////////////////////////// form ///////////////////*/
+.entrar .container{
+    /* border: solid 3px rgb(41, 193, 46); */
+    display: flex;
+    height: auto;
+   
+}
+.gif{
+    /* border: solid 3px rgb(118, 120, 255); */
+    height: 35vw;
+    position: relative;
+    width: 100%;
+    padding-left: 6%;
+}
+
+.gif2 img{
+    width:100%;
+    height: 100%;
+    border-radius:20px;
+}
+.gif1 img{
+    width:100%;
+    height: 100%;
+    border-radius:20px;
+}
+
+.gif1{
+    /* border: solid 3px rgb(240, 29, 29); */
+    position: absolute;
+    margin-top: 10vw;
+    width:62%;
+    height: 62%;
+}
+
+.gif2{
+    /* border: solid 3px rgb(0, 8, 255); */
+    position: absolute;
+    margin-left: 8vw;
+    margin-top: 2vw;
+    width:66%;
+    height: 62%;
+}
+
+
+.form{
+    /* border: white solid 1px; */
+    width: 70%;
+    height: 80%;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-top: 8%;
+    
+}
+
+input::placeholder {
+    font-size:1.4vw;
+    color: white;
+    padding: 2% 6% 2%;
+}
+
+.form h1{
+    font-size: 2.5vw;
+
+}
+
+.inputs{
+    /* border: solid teal 3px; */
+    /* justify-content: space-around; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: 50%;
+    padding: 2%;
+}
+
+.input{
+    border: solid 1px #00FFF0 ;
+    color: white;
+    display: flex;
+    border-radius: 15px;
+    height: 3vw;
+    width: 70%;
+    margin: 2.6%;
+    background-color: rgba(255, 255, 255, 0);
+    transition: all .3s;
+}
+
+.form button{
+    background-color: #00ffeeb5;
+    border-radius: 12px;
+    width: 9vw;
+    height: 3vw;
+    font-size: 1.5vw;
+    transition: all .2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+.input:hover {
+    transform: scale(1.1);
+}
+
+
+/*//////////////////////////// footer //////////////////*/
+
+.footer{
+    /* border: rgb(255, 238, 2) solid 3px; */
+    background: linear-gradient(to bottom, #00ffee30, #00ffee0c);
+    height: 110px;
+    
+}
+.footer .container{
+    /* border: rgb(0, 0, 0) solid 3px; */
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6%;
+    
+}
+
+.footer h2{
+    /* border: solid 3px indianred; */
+    padding-top: 2%;
+    margin: 0%;
+}
+.footer p{
+    padding-bottom: 1%;
+    /* border: solid 3px indianred; */
+    margin: 1%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
