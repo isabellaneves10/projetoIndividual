@@ -87,13 +87,15 @@ li:hover {
 /*////////////////////////// canvas ///////////////////////*/
 .canvas {
     /* border: solid 3px orange; */
-    margin-top: 6%; 
+    margin-top: 0; 
     display: flex;
     flex-direction: column;
     align-items: center;
 } 
 .canvas h1{
     width: auto;
+    margin: 0;
+    margin-bottom: 1%;
     /* border: solid 3px orange; */
     color: white;
     
