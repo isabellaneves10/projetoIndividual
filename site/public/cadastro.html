@@ -18,117 +18,131 @@
             <ul>
                 <li> <a class="ref" href="index.html"> Arte </a> </li>
 
-                <li> <a  id="conta" href="entrar.html">Já tem uma conta?</a></li>
-                </ul>
+                <li> <a id="conta" href="entrar.html">Já tem uma conta?</a></li>
+            </ul>
 
         </div>
     </div>
-        
 
-    <div class="cadastro" >
-       <div class="container" >
 
-        <div class="gif" >
-            <div class="gif2">
-                <img src="imgs/gif_cadastro2.gif">
+    <div class="cadastro">
+        <div class="container">
+
+            <div class="gif">
+                <div class="gif2">
+                    <img src="imgs/gif_cadastro2.gif">
+                </div>
+
+                <div class="gif1">
+                    <img src="imgs/gif_cadastro.gif">
+                </div>
             </div>
 
-            <div class="gif1" >
-                <img src="imgs/gif_cadastro.gif">
-            </div>
-        </div>
+            <div class="form">
+                <h1>Seja bem vinde!</h1>
 
-        <div class="form" >
-           <h1>Seja bem vinde!</h1>
-
-           <div class="inputs" >
-               <input  id="nome_input" class="input" placeholder="Nome" type="text">
-               <input id="email_input" class="input" placeholder="E-mail" type="email">
-               <input id="senha_input" class="input" placeholder="Senha" type="password">
-               <input id="confirmacao_senha_input" class="input" placeholder="Confirmar senha" type="password">
+                <div class="inputs">
+                    <input id="nome_input"  class="input" placeholder="Nome" type="text">
+                    <input id="email_input"  class="input" placeholder="E-mail" type="email">
+                    <input id="senha_input" class="input" placeholder="Senha" type="password">
+                    <input id="confirmacao_senha_input" class="input" placeholder="Confirmar senha" type="password">
+                </div>
+                <button onclick="cadastrar()">Cadastrar</button>
             </div>
-               <button onclick="cadastrar()" >Cadastrar</button>
         </div>
     </div>
-    </div>
 
-    <div class="footer" >
-        <div class="container" >
-          <h2>Art by Vincent</h2>
-          <p>desenvolvido por Isabella Neves</p>
+    <div class="footer">
+        <div class="container">
+            <h2>Art by Vincent</h2>
+            <p>desenvolvido por Isabella Neves</p>
 
         </div>
-  </div>
+    </div>
 </body>
 
 </html>
 
 <script>
 
-function cadastrar() {
-    // aguardar();
+    function cadastrar() {
+        // aguardar();
 
-    //Recupere o valor da nova input pelo nome do id
-    // Agora vá para o método fetch logo abaixo
-    var nomeVar = nome_input.value;
-    var emailVar = email_input.value;
-    var senhaVar = senha_input.value;
-    var confirmacaoSenhaVar = confirmacao_senha_input.value;
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = nome_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+        var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
-    if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+   
+            nome_input.style = 'border: 1px solid red'
+            email_input.style = 'border: 1px solid red'
+            senha_input.style = 'border: 1px solid red'
+            confirmacao_senha_input.style = 'border: 1px solid red'
 
-        alert('Preencha todos os campos')
-        // cardErro.style.display = "block"
-        // mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-        // finalizarAguardar();
-        // return false;
-    }
-    else {
-        setInterval(sumirMensagem, 5000)
-    }
+            alert('Preencha todos os campos')
 
-    // Enviando o valor da nova input
-    fetch("/usuarios/cadastrar", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            // crie um atributo que recebe o valor recuperado aqui
-            // Agora vá para o arquivo routes/usuario.js
-            nomeServer: nomeVar,
-            emailServer: emailVar,
-            senhaServer: senhaVar
-        })
-    }).then(function (resposta) {
 
-        console.log("resposta: ", resposta);
+            // cardErro.style.display = "block"
+            // mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            // finalizarAguardar();
+            // return false;
+        }
 
-        if (resposta.ok) {alert(`Cadastro realizado com sucesso! 
-Redirecionando para tela de Login...`)
-    //         cardErro.style.display = "block";
-
-    //         mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
-             setTimeout(() => {
-                window.location = "entrar.html";
-           }, "2000")
+        
+        else {
+            setInterval(sumirMensagem, 5000)
             
-    //         limparFormulario();
-    //         finalizarAguardar();
-       } else {
-             alert ("Houve um erro ao tentar realizar o cadastro!");
-         }
-    // }).catch(function (resposta) {
-    //     console.log(`#ERRO: ${resposta}`);
-    //     finalizarAguardar();
-    });
+            // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
 
-    return false;
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                alert(`Cadastro realizado com sucesso! 
+Redirecionando para tela de Login...`)
+                //         cardErro.style.display = "block";
+
+                //         mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                setTimeout(() => {
+                    window.location = "entrar.html";
+                }, "2000")
+
+                //         limparFormulario();
+                //         finalizarAguardar();
+            } else {
+                alert("Houve um erro ao tentar realizar o cadastro!");
+            }
+            // }).catch(function (resposta) {
+            //     console.log(`#ERRO: ${resposta}`);
+            //     finalizarAguardar();
+        });
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        // cardErro.style.display = "none"
+    }
+
+     
 }
 
-function sumirMensagem() {
-    // cardErro.style.display = "none"
-}
+
 
 </script>
