@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="./css/estilos_index.css">
 </head>
 
-<body>
+<body onload="qtdCadastrados()">
+
     <div class="banner">
 
         <div class="header">
@@ -18,7 +19,7 @@
 
                 <h1 id="primeiroH1">Art by vincent</h1>
                 <ul>
-                    <li id="aqui">  Arte  </li>
+                    <li id="aqui"> Arte </li>
                     <li> <a class="ref" href="entrar.html">Entrar</a></li>
                     <li> <a class="ref" href="cadastro.html"> Cadastro </a> </li>
                 </ul>
@@ -140,18 +141,53 @@
 
     <div class="somos">
         <div class="container">
-
+            <div id="ja_somos">
+            </div>
+            
+            <div id="cadastre" >
+                <a class="ref2" href="cadastro.html">Cadastre-se para pintar como Vincent Van Gogh</a>
+            </div>
         </div>
     </div>
 
-    <div class="footer" >
-          <div class="container" >
+    <div class="footer">
+        <div class="container">
             <h2>Art by Vincent</h2>
             <p>desenvolvido por Isabella Neves</p>
 
-          </div>
+        </div>
     </div>
 
 </body>
 
 </html>
+
+<script>
+
+    function qtdCadastrados() {
+        fetch(`/usuarios/cadastrados`)
+
+            .then(function (resposta) {
+                if (resposta.ok) {
+                    if (resposta.status == 204) {
+                       
+                        throw "Nenhum resultado encontrado!!";
+                    }
+
+                    resposta.json().then(function (resposta) {
+                        var qtd_cadastrados = resposta[0].qtd_cadastrados
+                        ja_somos.innerHTML = `Já somos ${qtd_cadastrados} cadastrados `
+                        console.log("Dados recebidos: ", JSON.stringify(resposta));
+                    });
+                } else {
+                    throw ('Houve um erro na API!');
+                }
+            }).catch(function (resposta) {
+                console.error(resposta);
+                
+            });
+
+    }
+
+
+</script>

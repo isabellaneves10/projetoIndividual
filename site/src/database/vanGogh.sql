@@ -1,6 +1,6 @@
-create database vanGogh;
+-- drop database vanGogh;
 
-drop database vanGogh;
+create database vanGogh;
 
 use vanGogh;
 
@@ -35,7 +35,7 @@ select * from acesso ;
 
 create table avaliacao(
 idAvaliacao int auto_increment,
-fkUsuario int ,
+fkUsuario int unique ,
 constraint ctFk_Usuario foreign key (fkUsuario) references Usuario(id),
 primary key(idAvaliacao , fkUsuario), 
 
@@ -43,14 +43,18 @@ nota varchar(2),
 descricao varchar(50)
 );
 
+
+insert into avaliacao values
+(null , 1 , '8' , 'muito bom'),
+(null , 2 , '8' , 'muito bom');
+
+
 select * from avaliacao ;
-
-
 
 select * from usuario;
 
-truncate usuario;
 
+select count(id) from usuario;
 
 
 
