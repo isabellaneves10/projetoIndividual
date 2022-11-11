@@ -1,6 +1,7 @@
 body {
     margin: 0;
-    background-image: url(/imgs/vetor.jpg);
+    /* background-color: #100F10; */
+    background-image: url(/imgs/vetor.png);
 
 }
 
@@ -10,18 +11,18 @@ body {
 }
 
 #primeiroH1 {
-    border: white solid 3px; 
+    border: white solid 3px;
     font-size: 2.8vw;
 }
 
 .header {
-     border: solid 3px orchid; 
+    border: solid 3px orchid;
     height: 110px;
 
 }
 
 .header .container {
-     border: solid 3px rgb(199, 17, 135); 
+    border: solid 3px rgb(199, 17, 135);
     display: flex;
     height: auto;
     justify-content: space-between;
@@ -30,15 +31,16 @@ body {
 
 
 .header {
-    border: solid 3px rgb(75, 8, 16); 
-    background: linear-gradient(to bottom, #00ffee30, #ffffff00);
+    border: solid 3px rgb(22, 179, 207);
+    background: linear-gradient(to bottom, #00ffee60, #ffffff00);
     display: flex;
     align-items: center;
+    justify-content: center;
     color: white;
 }
 
 #conta {
-     border: #00ffee40 solid 1px; 
+    border: #00ffee40 solid 1px;
     color: #100F10;
     background: #00ffeea4;
     border-radius: 20px;
@@ -58,6 +60,7 @@ body {
     color: #00ffee30;
 }
 
+/* 
 ul {
      border: solid 3px rgb(18, 75, 8); 
     align-items: center;
@@ -66,19 +69,94 @@ ul {
     justify-content: space-between;
     display: flex;
     list-style: none;
-}
+} */
 
 li {
-     border: solid 3px rgb(75, 37, 8); 
+    border: solid 3px rgb(75, 37, 8);
+    width: 100%;
+    display: flex;
     align-items: center;
+    justify-content: center;
+
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.5vw;
-    padding: 5px;
-    width: 100%;
+    /* padding: 5px; */
     text-align: center;
     transition: all .2s;
 }
 
 li:hover {
+    transform: scale(1.1);
+}
+
+
+/*/////////////////////// numero de cadastro //////////////*/
+#numero_usuario {
+    border: solid orangered 3px;
+    width: 28vw;
+}
+
+#numero_usuario .container {
+    border: solid rgb(255, 255, 255) 3px;
+
+}
+
+#msg_numero_usuario {
+    border: solid rgb(43, 205, 28) 3px;
+    color: white;
+    font-size: 1.5vw;
+    width: 15vw;
+}
+
+/*//////////////////////// mensagem /////////////////////*/
+
+#mensagem {
+    border: solid 3px lawngreen;
+}
+
+#mensagem .container {
+    height: 25vw;
+    border: solid 3px rgb(0, 227, 252);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#mensagem p {
+    border: solid 3px rgb(255, 231, 14);
+    color: white;
+    font-size: 2.6vw;
+    text-align: center;
+
+}
+
+#escolha {
+    border: solid lightcoral 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top: 0;
+    width: 15vw;
+}
+
+.conta {
+    /* background: #00ffeea4; */
+    border: #00ffee solid 2px;
+    border-radius: 20px;
+
+    color: #ffffff;
+    padding: 3%;
+    text-decoration: none;
+    width: auto;
+    height: auto;
+    font-size: 1.5vw;
+    display: flex;
+    align-items: center;
+    transition: all .2s;
+}
+
+.conta:hover {
     transform: scale(1.1);
 }

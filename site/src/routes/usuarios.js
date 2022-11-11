@@ -28,6 +28,9 @@ router.post("/cadastroindicacao", function (req, res) {
 router.get("/cadastrados", function (req, res) {
     usuarioController.cadastrados(req, res);
 })
+router.get("/numeroUsuario", function (req, res) {
+    usuarioController.numeroUsuario(req, res);
+})
 
 router.post("/autenticar", function (req, res) {
     usuarioController.entrar(req, res);

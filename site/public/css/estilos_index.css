@@ -3,6 +3,7 @@ body {
     background-color: #100F10;
     background-image: url(../imgs/vetor.jpg);
     background-attachment: fixed;
+    
 }
 
 .container {
@@ -35,7 +36,10 @@ body {
     width: auto;
     background-image: url(../imgs/banner.png);
     background-attachment: fixed;
-
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
 }
 
 #arte {
