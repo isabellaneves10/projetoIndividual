@@ -16,6 +16,14 @@ router.post("/cadastrar", function (req, res) {
     usuarioController.cadastrar(req, res);
 })
 
+router.post("/indicacao", function (req, res) {
+    usuarioController.indicacao(req, res);
+})
+
+router.post("/cadastroindicacao", function (req, res) {
+    usuarioController.cadastroindicacao(req, res);
+})
+
 /*rota nova pra metrica : "já somos **** cadastrados" */
 router.get("/cadastrados", function (req, res) {
     usuarioController.cadastrados(req, res);

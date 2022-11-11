@@ -52,7 +52,6 @@
     <div class="vanGogh">
         <div class="container">
 
-            <img src="imgs/vincent.png">
 
             <div class="vanGogh_historiac">
 
@@ -65,16 +64,35 @@
                     da pintura<br>
                     pós-impressionista.
                 </p>
-
+                
                 <button onclick="maisDetalhes()">Mais detalhes</button>
-
+                
             </div>
-
+            
+            <div class="img">
+                
+                <img src="imgs/vincent.png">
+            </div>
+            
         </div>
     </div>
+    
+        <div class="somos">
+            <div class="container">
+                <div id="ja_somos">
+                </div>
+    
+                <div id="cadastre">
+                    <a class="ref2" href="cadastro.html">Cadastre-se para pintar como Vincent Van Gogh</a>
+                </div>
+            </div>
+        </div>
 
     <div class="obras">
         <div class="container">
+            <div id="h1_obras" >
+                <h1>Obras mais famosas</h1>
+            </div>
 
 
             <div class="imagens_obras">
@@ -139,16 +157,20 @@
         </div>
     </div>
 
-    <div class="somos">
-        <div class="container">
-            <div id="ja_somos">
+    <div class="cartas">
+        <div class="container" >
+
+            <div class="img2" >
+                <img src="./imgs/cartas.jpg">
             </div>
-            
-            <div id="cadastre" >
-                <a class="ref2" href="cadastro.html">Cadastre-se para pintar como Vincent Van Gogh</a>
-            </div>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto soluta laborum officiis ex? Distinctio corporis earum, delectus quam ullam dolore ut molestias quaerat, consectetur adipisci quasi provident laborum porro facere.</p>
+
         </div>
+
     </div>
+
+
 
     <div class="footer">
         <div class="container">
@@ -170,7 +192,7 @@
             .then(function (resposta) {
                 if (resposta.ok) {
                     if (resposta.status == 204) {
-                       
+
                         throw "Nenhum resultado encontrado!!";
                     }
 
@@ -184,7 +206,7 @@
                 }
             }).catch(function (resposta) {
                 console.error(resposta);
-                
+
             });
 
     }

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art by vincent</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/logo.png">
     <link rel="stylesheet" href="./css/estilos_cadastro.css">
 </head>
 
@@ -42,10 +43,12 @@
                 <h1>Seja bem vinde!</h1>
 
                 <div class="inputs">
-                    <input id="nome_input"  class="input" placeholder="Nome" type="text">
-                    <input id="email_input"  class="input" placeholder="E-mail" type="email">
+                    <input id="nome_input" class="input" placeholder="Nome" type="text">
+                    <input id="email_input" class="input" placeholder="E-mail" type="email">
                     <input id="senha_input" class="input" placeholder="Senha" type="password">
                     <input id="confirmacao_senha_input" class="input" placeholder="Confirmar senha" type="password">
+                    <p>Número de cadastro de quem te indicou (opcional)</p>
+                    <input id="fkIndicador_input" class="input" placeholder="ex : 1" type="text">
                 </div>
                 <button onclick="cadastrar()">Cadastrar</button>
             </div>
@@ -65,45 +68,148 @@
 
 <script>
 
-    function cadastrar() {
-        // aguardar();
 
-        //Recupere o valor da nova input pelo nome do id
-        // Agora vá para o método fetch logo abaixo
+    function cadastrar() {
         var nomeVar = nome_input.value;
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
+        var fkIndicadorVar = Number(fkIndicador_input.value);
+        var indicacaoVar = Number(fkIndicador_input.value);
+        var erro = "no";
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-   
-            nome_input.style = 'border: 1px solid red'
-            email_input.style = 'border: 1px solid red'
-            senha_input.style = 'border: 1px solid red'
-            confirmacao_senha_input.style = 'border: 1px solid red'
+        if (nomeVar == "" && emailVar == "" && senhaVar == "" && confirmacaoSenhaVar == "") {
+            erro = "yes";
+            alert('preencha todos os campos')
 
-            alert('Preencha todos os campos')
+            nome_input.style.border = "solid 1px red"
+            email_input.style.border = "solid 1px red"
+            senha_input.style.border = "solid 1px red"
+            confirmacao_senha_input.style.border = "solid 1px red"
 
+        } else if (nomeVar == "") {
 
-            // cardErro.style.display = "block"
-            // mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            // finalizarAguardar();
-            // return false;
+            nome_input.style.border = "solid 1px red"
+            alert("Preencha os campos vazios!")
+            erro = "yes"
+        } else if (emailVar == "") {
+
+            email_input.style.border = "solid 1px red"
+            alert("Preencha os campos vazios!")
+            erro = "yes"
+        } else if (senhaVar == "") {
+
+            senha_input.style.border = "solid 1px red"
+            alert("Preencha os campos vazios!")
+            confirmacao_senha_input.style.border = "solid 1px red"
+            confirmacao_senha_input.value = ''
+            erro = "yes"
+
+        } else if (senhaVar != confirmacaoSenhaVar || confirmacaoSenhaVar == "") {
+
+            senha_input.style.border = "solid 1px red"
+            confirmacao_senha_input.style.border = "solid 0.5px red"
+            alert("As senhas não coincidem!")
+            senha_input.value = ''
+            confirmacao_senha_input.value = ''
+            erro = "yes"
         }
 
-        
         else {
-            setInterval(sumirMensagem, 5000)
-            
-            // Enviando o valor da nova input
+
+            if (erro == "no" && fkIndicadorVar != 0) {
+
+                fetch("/usuarios/indicacao", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        indicacaoServer: indicacaoVar,
+                    })
+                }).then(function (resposta) {
+                    console.log("ESTOU NO THEN DO entrar()!")
+                    if (resposta.ok) {
+                        resposta.json().then(json => {
+                            console.log(json);
+                            console.log(JSON.stringify(json));
+
+                            sessionStorage.ID_USUARIO = json.id;
+                            var idVar = sessionStorage.ID_USUARIO;
+
+
+                            /*cadastrando*/
+
+
+                            fetch("/usuarios/cadastroindicacao", {
+                                method: "POST",
+                                headers: {
+                                    "Content-Type": "application/json"
+                                },
+                                body: JSON.stringify({
+                                    nomeServer: nomeVar,
+                                    emailServer: emailVar,
+                                    senhaServer: senhaVar,
+                                    fkIndicadorServer: idVar
+                                })
+                            }).then(function (resposta) {
+                                console.log("resposta: ", resposta);
+                                if (resposta.ok) {
+
+                                    alert("Cadastro realizado com sucesso! Redirecionando para a tela de login")
+                                    setTimeout(() => {
+                                        window.location = "entrar.html";
+                                    }, "2000")
+                                } else {
+                                    resposta.text().then(texto => {
+                                        alert('ERRO : EMAIL OU NÚMERO DE INDICAÇÃO DUPLICADOS')
+                                        alert('Esse número de indicação ou email informados já estão vinculados a outro usuário , digite outro número ou siga sem indicação ou outro cadastre outro email ')
+                                    })
+                                }
+                            }).catch(function (resposta) {
+                                console.log(`#ERRO: ${resposta}`);
+                            });
+                        });
+                    } else {
+                        resposta.text().then(texto => {
+                            alert('Esse número de indicação não existe , digite outro número de indicação ou siga sem indicação')
+                        })
+                    }
+                }).catch(function (resposta) {
+                    console.log(`#ERRO: ${resposta}`);
+                });
+
+
+                return false;
+            }
+
+
+            if (fkIndicadorVar == "") {
+                cadastroSemIndicacao()
+
+            }
+        }
+
+    }
+
+
+    function cadastroSemIndicacao() {
+        var nomeVar = nome_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+        var confirmacaoSenhaVar = confirmacao_senha_input.value;
+        var fkIndicadorVar = Number(fkIndicador_input.value);
+        var indicacaoVar = Number(fkIndicador_input.value);
+        var erro = "no";
+
+
         fetch("/usuarios/cadastrar", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
+
                 nomeServer: nomeVar,
                 emailServer: emailVar,
                 senhaServer: senhaVar
@@ -113,35 +219,26 @@
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                alert(`Cadastro realizado com sucesso! 
-Redirecionando para tela de Login...`)
-                //         cardErro.style.display = "block";
-
-                //         mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+                alert(`Cadastro realizado com sucesso! edirecionando para tela de Login...`)
 
                 setTimeout(() => {
                     window.location = "entrar.html";
                 }, "2000")
 
-                //         limparFormulario();
-                //         finalizarAguardar();
             } else {
-                alert("Houve um erro ao tentar realizar o cadastro!");
+                alert('ERRO : EMAIL DUPLICADO');
+            
+                alert('O email informado já está vinculado a outro usuário');
             }
-            // }).catch(function (resposta) {
-            //     console.log(`#ERRO: ${resposta}`);
-            //     finalizarAguardar();
+
         });
 
         return false;
     }
 
-    function sumirMensagem() {
-        // cardErro.style.display = "none"
-    }
 
-     
-}
+
+
 
 
 

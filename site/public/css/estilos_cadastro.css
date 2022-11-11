@@ -93,6 +93,7 @@ li:hover {
    
 }
 .gif{
+    margin-top: 2%;
     /* border: solid 3px rgb(118, 120, 255); */
     height: 35vw;
     position: relative;
@@ -115,16 +116,16 @@ li:hover {
     position: absolute;
     margin-top: 10vw;
     margin-left: 8vw;
-    width:66%;
-    height: 62%;
+    width:72%;
+    height: 68%;
 }
 
 .gif2{
     /* border: solid 3px rgb(0, 8, 255); */
     position: absolute;
     margin-top: 2vw;
-    width:62%;
-    height: 68%;
+    width:66%;
+    height: 74%;
 }
 
 
@@ -142,13 +143,17 @@ li:hover {
 
 input::placeholder {
     font-size:1.4vw;
-    color: white;
+    color: rgba(255, 255, 255, 0.7);
     padding: 2% 6% 2%;
 }
 
 .form h1{
     font-size: 3vw;
 
+}
+.inputs p{
+    /* border: solid 3px olive; */
+    font-size: 1vw;
 }
 
 .inputs{
@@ -167,7 +172,7 @@ input::placeholder {
     color: white;
     display: flex;
     border-radius: 15px;
-    height: 3vw;
+    height: 2.8vw;
     width: 70%;
     margin: 2.6%;
     background-color: rgba(255, 255, 255, 0);
@@ -178,7 +183,7 @@ input::placeholder {
     background-color: #00ffeeb5;
     border-radius: 12px;
     width: 9vw;
-    height: 3vw;
+    height: 2.8vw;
     font-size: 1.5vw;
     transition: all .2s;
 }

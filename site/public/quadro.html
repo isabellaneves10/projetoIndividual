@@ -10,7 +10,7 @@
 </head>
 
 <body>
-
+    <!-- 
     <div class="header">
         <div class="container">
 
@@ -21,18 +21,24 @@
             </ul>
 
         </div>
-    </div>
+    </div> -->
 
-    
-    <div class="canvas"> 
-        <h1>Desenhe aqui</h1>
+
+    <div class="canvas">
         <div class="container">
 
             <canvas id="tela">
 
             </canvas>
 
-        </div>
+    </div>
+
+    <div class="nav_inferior" > 
+        <h1>Desenhe aqui</h1>
+        <a class="conta" href="entrar.html">Logout</a> 
+        <a class="conta" href="menu.html">Voltar ao Menu Principal</a> 
+    </div>
+
     </div>
 
 
@@ -71,9 +77,9 @@
         /*o contexto que é modificado não a tela */
         const contexto = tela.getContext('2d')
         /*tamanho da tela*/
-        tela.width = 800;
+        tela.width = 1320;
         /*altura da tela*/
-        tela.height = 450;
+        tela.height = 550;
 
         /*modificar o contexto cor e largura da linha*/
         contexto.lineWidth = 4;
@@ -86,7 +92,7 @@
             /*inicializa a const contexto*/
             contexto.beginPath();
             /*passando as coordenadas do cursor*/
-            contexto.moveTo(linha.posAnterior.x , linha.posAnterior.y)
+            contexto.moveTo(linha.posAnterior.x, linha.posAnterior.y)
             /*onde eu quero as linhas*/
             contexto.lineTo(linha.pos.x, linha.pos.y);
             /*desenha ai*/
@@ -117,19 +123,20 @@
             if (pincel.ativo && pincel.movendo && pincel.posAnterior) {
                 /*passando as duas posições pra desenhar uma linha*/
                 desenharLinha({
-                    pos: pincel.pos, posAnterior: pincel.posAnterior})
-                    pincel.movendo = false;
+                    pos: pincel.pos, posAnterior: pincel.posAnterior
+                })
+                pincel.movendo = false;
 
             }
             /*depois que ele passar do if , as const mudam */
-           pincel.posAnterior = {x: pincel.pos.x , y: pincel.pos.y}
+            pincel.posAnterior = { x: pincel.pos.x, y: pincel.pos.y }
 
 
-           /*looping do ciclo*/
-           setTimeout(ciclo,10);
+            /*looping do ciclo*/
+            setTimeout(ciclo, 10);
 
         }
-          /*chamando a função ciclo*/
+        /*chamando a função ciclo*/
         ciclo()
     })
 

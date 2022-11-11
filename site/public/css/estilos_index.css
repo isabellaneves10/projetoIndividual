@@ -1,8 +1,8 @@
 body {
     margin: 0;
     background-color: #100F10;
-background-image: url(/imgs/vetor.jpg);
-background-attachment: fixed;
+    background-image: url(../imgs/vetor.jpg);
+    background-attachment: fixed;
 }
 
 .container {
@@ -18,7 +18,7 @@ background-attachment: fixed;
 .header {
     /* border: solid 3px orchid; */
     height: 110px;
- 
+
 }
 
 .header .container {
@@ -56,6 +56,7 @@ background-attachment: fixed;
 #aqui {
     color: #00FFF0;
 }
+
 .ref {
 
     color: white;
@@ -84,6 +85,7 @@ li {
 li:hover {
     transform: scale(1.1);
 }
+
 /*//////////////////////////////// conteudo /////////////////////////*/
 
 .conteudo {
@@ -137,18 +139,23 @@ li:hover {
 /*///////////////////////////////////// vanGogh///////////////////////////////////*/
 
 
-.vanGogh .container{
-    /* border: solid rgb(255, 255, 255) 3px; */
-    border-radius: 20px;
-    background-color: #44e0d633;
+.vanGogh .container {
+    /* border: solid rgba(37, 172, 136, 0.528) 1px; */
+    /* border-radius: 20px; */
+    border-image: linear-gradient(#00ffee82, #160c9f5d) 30;
+    border-width: 1px;
+    border-style: solid;
+    /* background-color: #44e0d633; */
     display: flex;
     align-items: center;
     /* justify-content: space-around; */
-    padding-top: 4%;
-    padding-bottom: 4%; 
+    /* padding-top: 0.5%; */
+    /* padding-bottom: 0.5%;  */
     margin-bottom: 100px;
-   
-    
+    width: 70%;
+    height: 35vw;
+
+
 }
 
 
@@ -158,13 +165,14 @@ button:hover {
 }
 
 .vanGogh_historiac {
-    /* border: solid rgb(95, 38, 0) 3px; */
+    /* border: solid rgb(13, 179, 27) 3px; */
     text-align: center;
     justify-items: center;
-    margin: 0 15vw 0 1vw;
-    justify-content: space-around;
-   padding: 4% 0 4% 0;
-    
+    /* margin: 0 15vw 0 1vw; */
+    /* justify-content: space-around; */
+    /* padding: 4% 0 4% 0; */
+    width: 50%;
+
 
 }
 
@@ -175,13 +183,23 @@ button:hover {
 }
 
 .vanGogh img {
-    /* border: solid rgb(95, 38, 0) 3px; */
-    width: 28%;
-    height: 100%;
-    margin: 0 1vw 0 15vw;
-    
-    
+    height: 30vw;
+    /* border: solid rgb(255, 255, 255) 3px; */
 }
+
+.vanGogh .img {
+    /* border: solid rgb(95, 38, 0) 3px; */
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 0 1vw 0 15vw; */
+    /* padding: 0 2% 0 2%; */
+
+
+}
+
 .vanGogh_historiac p {
     /* border: solid rgb(95, 38, 0) 3px; */
     color: white;
@@ -189,12 +207,11 @@ button:hover {
 }
 
 .vanGogh_historiac button {
-    /* border: solid rgb(254, 114, 20) 3px; */
     text-align: center;
-    border: white 1px solid;
+    border: rgba(255, 255, 255, 0.445) 1px solid;
     color: white;
-    font-size: 1.4vw;
-    width: 54%;
+    font-size: 1vw;
+    width: 26%;
     background-color: #5ae7dd00;
     border-radius: 15px;
     transition: all .4s;
@@ -207,27 +224,31 @@ button:hover {
     transform: scale(1.1);
 }
 
-
-.obras .container{
+#h1_obras{
+    color: white;
+    font-size: 2vw;
+    text-align: center;
+}
+.obras .container {
     /* border: #00FFF0 solid 3px; */
 }
 
-.imagens_obras{
+.imagens_obras {
     /* border: solid 3px indigo; */
     display: flex;
     justify-content: space-around;
     padding-top: 3%;
     padding-bottom: 0.5%;
-    
- }
 
- .imagens_obras img{
-     /* border: solid 3px rgb(255, 255, 255); */
+}
+
+.imagens_obras img {
+    /* border: solid 3px rgb(255, 255, 255); */
     width: 98%;
     transition: all .4s;
- }
+}
 
-.texto{
+.texto {
     /* border: solid rgb(77, 255, 0) 3px; */
     color: white;
     width: 80%;
@@ -235,14 +256,14 @@ button:hover {
 
 }
 
-.legenda{
+.legenda {
     /* border: solid lavenderblush 3px; */
     /* padding: 0 0 0 4%; */
 }
 
 
 /*//////////////////////// somos ///////////////////////////////*/
-#ja_somos{
+#ja_somos {
     /* border: rgb(182, 7, 176) solid 3px; */
     color: white;
     width: auto;
@@ -250,12 +271,13 @@ button:hover {
     font-size: 4vw;
     text-align: center;
 }
-.ref2{
+
+.ref2 {
     text-decoration: none;
     color: rgb(0, 0, 0);
 }
 
-#cadastre{
+#cadastre {
     /* border: #00877e solid 1px; */
     text-decoration: none;
     background-color: #00FFF0;
@@ -271,11 +293,14 @@ button:hover {
     transform: scale(1.1);
 
 }
-.somos{
+
+.somos {
+    margin-top: 10%;
+    margin-bottom: 10%;
     /* border: salmon solid 3px; */
 }
-.somos .container{
-    border: rgb(255, 255, 255) solid 1px;
+
+.somos .container {
     width: 66%;
     border-radius: 10px;
     display: flex;
@@ -284,37 +309,77 @@ button:hover {
     flex-direction: column;
     align-items: center;
     height: auto;
-    
+
 }
+
 /*//////////////////////////// footer //////////////////*/
 
-.footer{
+.footer {
     /* border: rgb(255, 238, 2) solid 3px; */
     background: linear-gradient(to bottom, #00ffee30, #00ffee0c);
     height: 110px;
-    
+
 }
-.footer .container{
+
+.footer .container {
     /* border: rgb(0, 0, 0) solid 3px; */
     height: 110px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 6%;
-    
+
 }
 
-.footer h2{
+.footer h2 {
     /* border: solid 3px indianred; */
     padding-top: 2%;
     margin: 0%;
 }
-.footer p{
+
+.footer p {
     padding-bottom: 1%;
     /* border: solid 3px indianred; */
     margin: 1%;
 }
 
 
+/*//////////////////////////////// cartas /////////////////*/
+.cartas{
+/* border: 3px solid orange; */
+margin-top: 10%;
 
- 
+}
+
+.cartas .container{
+    border-image: linear-gradient(#00ffee82, #160c9f5d) 30;
+    border-width: 1px;
+    border-style: solid;
+    display: flex;
+    align-items: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+
+}
+.cartas img{
+    height: 40vw;
+}
+
+
+.cartas .img2{
+    /* border: #00FFF0 solid 3px; */
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+
+.cartas p{
+    
+    /* border: #bd2727 solid 3px; */
+    color: white;
+    font-size: 2vw;
+    width: 45%;
+    height: auto;
+    text-align: justify;
+}
