@@ -1,9 +1,11 @@
+
 body {
+    padding: 0;
     margin: 0;
-    background-color: #100F10;
-    background-image: url(../imgs/vetor.jpg);
+    /* background-color:  #dffbfd98; */
+    /* background-image: url(../imgs/banner.png); */
     background-attachment: fixed;
-    
+    color: black;
 }
 
 .container {
@@ -34,6 +36,7 @@ body {
     /* border: solid 3px rgb(8, 75, 11); */
     height: 660px;
     width: auto;
+    color: white;
     background-image: url(../imgs/banner.png);
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -44,7 +47,7 @@ body {
 
 #arte {
     /* border: solid 3px rgb(112, 218, 213); */
-    color: white;
+    /* color: white; */
     padding: 18% 12% 18% 12%;
     text-align: center;
     font-size: 2.5vw;
@@ -52,9 +55,9 @@ body {
 
 .header {
     /* border: solid 3px rgb(75, 8, 16); */
-    background: linear-gradient(to bottom, #00ffee5f, #ffffff00);
+    background: linear-gradient(to bottom, #0000009f, #41210300);
     display: flex;
-    color: white;
+    /* color: white; */
 }
 
 #aqui {
@@ -91,7 +94,7 @@ li:hover {
 }
 
 /*//////////////////////////////// conteudo /////////////////////////*/
-
+/* 
 .conteudo {
     margin-top: 100px;
     margin-bottom: 100px;
@@ -99,7 +102,7 @@ li:hover {
 }
 
 .conteudo .container {
-    /* border: solid 3px white; */
+    border: solid 3px white;
     display: flex;
     height: auto;
     justify-content: space-around;
@@ -107,13 +110,13 @@ li:hover {
 }
 
 .conteudo .historia {
-    /* border: solid 3px indigo; */
+    border: solid 3px indigo;
     width: 40%;
     height: 40%;
 }
 
 .historia p {
-    /* border: solid 3px tomato; */
+    border: solid 3px tomato;
     text-align: justify;
     color: white;
     font-size: 1.8vw;
@@ -134,29 +137,31 @@ li:hover {
 }
 
 .conteudo img {
-    /* border: solid 3px rgb(91, 130, 0); */
+    border: solid 3px rgb(91, 130, 0);
     width: 40%;
     height: 100%;
 
-}
+} */
 
 /*///////////////////////////////////// vanGogh///////////////////////////////////*/
 
 
 .vanGogh .container {
-    /* border: solid rgba(37, 172, 136, 0.528) 1px; */
+    border: solid rgba(37, 172, 136, 0.528) 1px;
     /* border-radius: 20px; */
-    border-image: linear-gradient(#00ffee82, #160c9f5d) 30;
-    border-width: 1px;
-    border-style: solid;
-    /* background-color: #44e0d633; */
+    /* border-image: linear-gradient(#00ffee, #090544) 30; */
+    /* border-width: 3px;
+    border-style: solid; */
+    /* background-color: rgba(19, 173, 166, 0.685); */
     display: flex;
     align-items: center;
     /* justify-content: space-around; */
     /* padding-top: 0.5%; */
     /* padding-bottom: 0.5%;  */
-    margin-bottom: 100px;
-    width: 70%;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    /* width: 70%;
+    width: 70%; */
     height: 35vw;
 
 
@@ -164,9 +169,9 @@ li:hover {
 
 
 
-button:hover {
+/* button:hover {
     transform: scale(1.1);
-}
+} */
 
 .vanGogh_historiac {
     /* border: solid rgb(13, 179, 27) 3px; */
@@ -183,7 +188,7 @@ button:hover {
 .vanGogh_historiac h1 {
     /* border: solid rgb(239, 162, 112) 3px; */
     font-size: 2.8vw;
-    color: white;
+    /* color: white; */
 }
 
 .vanGogh img {
@@ -206,13 +211,13 @@ button:hover {
 
 .vanGogh_historiac p {
     /* border: solid rgb(95, 38, 0) 3px; */
-    color: white;
+    /* color: white; */
     font-size: 2vw;
 }
 
-.vanGogh_historiac button {
+/* .vanGogh_historiac button {
     text-align: center;
-    border: rgba(255, 255, 255, 0.445) 1px solid;
+    border: #090544 1px solid;
     color: white;
     font-size: 1vw;
     width: 26%;
@@ -220,71 +225,163 @@ button:hover {
     border-radius: 15px;
     transition: all .4s;
 
-}
+} */
 
 
 /*/////////////////////////////// obras /////////////////////*/
-.imagens_obras img:hover {
-    transform: scale(1.1);
-}
 
 #h1_obras{
-    color: white;
+    /* color: white; */
     font-size: 2vw;
     text-align: center;
 }
 .obras .container {
     /* border: #00FFF0 solid 3px; */
+    width: 90%;
 }
 
 .imagens_obras {
     /* border: solid 3px indigo; */
-    display: flex;
+    /* display: flex;
     justify-content: space-around;
     padding-top: 3%;
-    padding-bottom: 0.5%;
+    padding-bottom: 0.5%; */
 
 }
 
 .imagens_obras img {
-    /* border: solid 3px rgb(255, 255, 255); */
-    width: 98%;
-    transition: all .4s;
+    /* border: solid 3px rgb(214, 19, 19); */
+    width: 35%;
 }
+
 
 .texto {
-    /* border: solid rgb(77, 255, 0) 3px; */
-    color: white;
-    width: 80%;
-    font-size: 1.3vw;
-
+    border: solid rgb(77, 255, 0) 3px;
+    /* color: black; */
+    width: 40%;
+    font-size: 1.8vw;
+    
+}
+.imagens_obras .legenda1:hover {
+    transform: scale(1.1);
+}
+.imagens_obras .legenda2:hover {
+    transform: scale(1.1);
+}
+.imagens_obras .legenda3:hover {
+    transform: scale(1.1);
+}
+.imagens_obras .legenda4:hover {
+    transform: scale(1.1);
+}
+.imagens_obras .legenda5:hover {
+    transform: scale(1.1);
+}
+.imagens_obras .legenda6:hover {
+    transform: scale(1.1);
 }
 
-.legenda {
-    /* border: solid lavenderblush 3px; */
+.legenda1 {
+    /* border: solid rgb(206, 90, 128) 3px; */
+    background-color: #9dbcbc;
+    /* border-radius: 15px; */
+    padding: 2% 0 2% 0;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    transition: all .4s;
+}
+.legenda2 {
+    /* border: solid rgb(206, 90, 128) 3px; */
     /* padding: 0 0 0 4%; */
+    background-color: #8acbb5;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2% 0 2% 0;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    transition: all .4s;
+}
+.legenda3 {
+    /* border: solid rgb(206, 90, 128) 3px; */
+    /* padding: 0 0 0 4%; */
+    background-color: #f7e9aa;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2% 0 2% 0;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    transition: all .4s;
+}
+.legenda4 {
+    /* border: solid rgb(206, 90, 128) 3px; */
+    /* padding: 0 0 0 4%; */
+    background-color: #eb9d8d;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2% 0 2% 0;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    transition: all .4s;
+}
+.legenda5 {
+    /* border: solid rgb(206, 90, 128) 3px; */
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #c7b299;
+    padding: 2% 0 2% 0;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    transition: all .4s;
+    /* padding: 0 0 0 4%; */
+}
+.legenda6 {
+    /* border: solid rgb(206, 90, 128) 3px; */
+    /* padding: 0 0 0 4%; */
+    background-color: #b998b3;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2% 0 2% 0;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    transition: all .4s;
 }
 
 
 /*//////////////////////// somos ///////////////////////////////*/
 #ja_somos {
     /* border: rgb(182, 7, 176) solid 3px; */
-    color: white;
+    /* color: white; */
     width: auto;
     height: auto;
     font-size: 4vw;
     text-align: center;
+    color: black;
 }
 
 .ref2 {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: white;
+    /* color: rgb(0, 0, 0); */
 }
 
 #cadastre {
     /* border: #00877e solid 1px; */
     text-decoration: none;
-    background-color: #00FFF0;
+    background-color: #090544;
     font-size: 1.8vw;
     border-radius: 10px;
     padding: 1% 2% 1% 2%;
@@ -299,8 +396,8 @@ button:hover {
 }
 
 .somos {
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     /* border: salmon solid 3px; */
 }
 
@@ -317,40 +414,39 @@ button:hover {
 }
 
 /*//////////////////////////// footer //////////////////*/
-
-.footer {
+.footer{
     /* border: rgb(255, 238, 2) solid 3px; */
-    background: linear-gradient(to bottom, #00ffee30, #00ffee0c);
-    height: 110px;
-
+    /* background: linear-gradient(to bottom, #00ffee30, #00ffee0c); */
+   background-color: black;
+   height: 86px;
+    color: white;
+    
 }
-
-.footer .container {
+.footer .container{
     /* border: rgb(0, 0, 0) solid 3px; */
     height: 110px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 6%;
-
+    height: 86px;
+    
 }
 
-.footer h2 {
+.footer h2{
     /* border: solid 3px indianred; */
     padding-top: 2%;
     margin: 0%;
 }
-
-.footer p {
+.footer p{
     padding-bottom: 1%;
     /* border: solid 3px indianred; */
     margin: 1%;
 }
 
-
 /*//////////////////////////////// cartas /////////////////*/
-.cartas{
-/* border: 3px solid orange; */
+/* .cartas{
+border: 3px solid orange;
 margin-top: 10%;
 
 }
@@ -371,7 +467,7 @@ margin-top: 10%;
 
 
 .cartas .img2{
-    /* border: #00FFF0 solid 3px; */
+    border: #00FFF0 solid 3px;
     display: flex;
     justify-content: center;
     width: 50%;
@@ -380,10 +476,10 @@ margin-top: 10%;
 
 .cartas p{
     
-    /* border: #bd2727 solid 3px; */
+    border: #bd2727 solid 3px;
     color: white;
     font-size: 2vw;
     width: 45%;
     height: auto;
     text-align: justify;
-}
+} */

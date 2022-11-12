@@ -1,6 +1,7 @@
 body {
     margin: 0;
-    background-color: #100F10;
+    background-color: #ffffff;
+    color: black;
 
 }
 
@@ -16,7 +17,7 @@ body {
 
 .header {
     /* border: solid 3px orchid; */
-    height: 110px;
+    height: 95px;
  
 }
 
@@ -31,16 +32,17 @@ body {
 
 .header {
     /* border: solid 3px rgb(75, 8, 16); */
-    background: linear-gradient(to bottom, #00ffee30, #ffffff00);
+    background: linear-gradient(to bottom, #00ffeec5, #00ffee00);
+    /* background:  #00ffee; */
     display: flex;
     align-items: center;
-    color: white;
+    /* color: white; */
 }
 
 #conta{
     /* border: #00ffee40 solid 1px; */
-    color: #100F10;
-    background:#00ffeea4;
+    color: #ffffff;
+    background:#000000;
     border-radius: 20px;
     padding: 2% 10%;
     text-decoration: none;
@@ -48,7 +50,7 @@ body {
    
 }
 .ref {
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
@@ -114,18 +116,18 @@ li:hover {
 .gif1{
     /* border: solid 3px rgb(240, 29, 29); */
     position: absolute;
-    margin-top: 10vw;
+    margin-top: 8vw;
     margin-left: 8vw;
-    width:72%;
-    height: 68%;
+    width:76%;
+    height: 72%;
 }
 
 .gif2{
     /* border: solid 3px rgb(0, 8, 255); */
     position: absolute;
     margin-top: 2vw;
-    width:66%;
-    height: 74%;
+    width:70%;
+    height: 80%;
 }
 
 
@@ -133,7 +135,7 @@ li:hover {
     /* border: white solid 1px; */
     width: 70%;
     height: 80%;
-    color: white;
+    /* color: white; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -143,7 +145,7 @@ li:hover {
 
 input::placeholder {
     font-size:1.4vw;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(0, 0, 0, 0.7);
     padding: 2% 6% 2%;
 }
 
@@ -168,19 +170,20 @@ input::placeholder {
 }
 
 .input{
-    border: solid 1px #00FFF0 ;
-    color: white;
+    border: solid 2px #00FFF0 ;
+    color: rgb(0, 0, 0);
     display: flex;
     border-radius: 15px;
     height: 2.8vw;
     width: 70%;
-    margin: 2.6%;
+    margin: 1.5%;
     background-color: rgba(255, 255, 255, 0);
     transition: all .3s;
 }
 
 .form button{
     background-color: #00ffeeb5;
+    border: #00FFF0 solid 1px;
     border-radius: 12px;
     width: 9vw;
     height: 2.8vw;
@@ -199,8 +202,10 @@ button:hover {
 
 .footer{
     /* border: rgb(255, 238, 2) solid 3px; */
-    background: linear-gradient(to bottom, #00ffee30, #00ffee0c);
-    height: 110px;
+    /* background: linear-gradient(to bottom, #00ffee30, #00ffee0c); */
+   background-color: black;
+    height: 86px;
+    color: white;
     
 }
 .footer .container{
@@ -210,6 +215,7 @@ button:hover {
     flex-direction: column;
     align-items: center;
     margin-top: 6%;
+    height: 86px;
     
 }
 

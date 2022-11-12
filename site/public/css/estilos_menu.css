@@ -1,8 +1,8 @@
 body {
     margin: 0;
-    /* background-color: #100F10; */
-    background-image: url(/imgs/vetor.png);
-
+    background-color: #ffffff;
+    color: black;
+    
 }
 
 .container {
@@ -11,47 +11,46 @@ body {
 }
 
 #primeiroH1 {
-    border: white solid 3px;
+    /* border: white solid 3px; */
     font-size: 2.8vw;
 }
 
 .header {
-    border: solid 3px orchid;
-    height: 110px;
-
+    /* border: solid 3px orchid; */
+    height: 95px;
+ 
 }
 
 .header .container {
-    border: solid 3px rgb(199, 17, 135);
+    /* border: solid 3px rgb(199, 17, 135); */
     display: flex;
     height: auto;
     justify-content: space-between;
-
+    
 }
 
 
 .header {
-    border: solid 3px rgb(22, 179, 207);
-    background: linear-gradient(to bottom, #00ffee60, #ffffff00);
+    /* border: solid 3px rgb(75, 8, 16); */
+    background: linear-gradient(to bottom, #00ffeec5, #00ffee00);
+    /* background:  #00ffee; */
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: white;
+    /* color: white; */
 }
 
-#conta {
-    border: #00ffee40 solid 1px;
-    color: #100F10;
-    background: #00ffeea4;
+#conta{
+    /* border: #00ffee40 solid 1px; */
+    color: #ffffff;
+    background:#000000;
     border-radius: 20px;
     padding: 2% 10%;
     text-decoration: none;
     width: 40%;
-
+    
 }
-
 .ref {
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
@@ -60,28 +59,25 @@ body {
     color: #00ffee30;
 }
 
-/* 
 ul {
-     border: solid 3px rgb(18, 75, 8); 
+    /* border: solid 3px rgb(18, 75, 8); */
     align-items: center;
-    width: 28%;
+    width: 48%;
     padding: 0;
     justify-content: space-between;
     display: flex;
     list-style: none;
-} */
+}
 
 li {
-    border: solid 3px rgb(75, 37, 8);
-    width: 100%;
-    display: flex;
+    /* border: solid 3px rgb(75, 37, 8); */
     align-items: center;
-    justify-content: center;
-
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.5vw;
-    /* padding: 5px; */
+    padding: 5px;
+    width: 50%;
     text-align: center;
+    list-style: none;
     transition: all .2s;
 }
 
@@ -103,7 +99,7 @@ li:hover {
 
 #msg_numero_usuario {
     border: solid rgb(43, 205, 28) 3px;
-    color: white;
+    /* color: white; */
     font-size: 1.5vw;
     width: 15vw;
 }
@@ -125,7 +121,7 @@ li:hover {
 
 #mensagem p {
     border: solid 3px rgb(255, 231, 14);
-    color: white;
+    /* color: white; */
     font-size: 2.6vw;
     text-align: center;
 
@@ -146,7 +142,7 @@ li:hover {
     border: #00ffee solid 2px;
     border-radius: 20px;
 
-    color: #ffffff;
+    color: #000000;
     padding: 3%;
     text-decoration: none;
     width: auto;
@@ -160,3 +156,36 @@ li:hover {
 .conta:hover {
     transform: scale(1.1);
 }
+
+
+/*//////////////////////// footer ///////////////////*/
+.footer{
+    /* border: rgb(255, 238, 2) solid 3px; */
+    /* background: linear-gradient(to bottom, #00ffee30, #00ffee0c); */
+   background-color: black;
+    height: 86px;
+    color: white;
+    
+}
+.footer .container{
+    /* border: rgb(0, 0, 0) solid 3px; */
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6%;
+    height: 86px;
+    
+}
+
+.footer h2{
+    /* border: solid 3px indianred; */
+    padding-top: 2%;
+    margin: 0%;
+}
+.footer p{
+    padding-bottom: 1%;
+    /* border: solid 3px indianred; */
+    margin: 1%;
+}
+
