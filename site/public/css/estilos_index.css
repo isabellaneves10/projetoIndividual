@@ -1,11 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Shalimar&display=swap');
 
 body {
     padding: 0;
     margin: 0;
-    /* background-color:  #dffbfd98; */
-    /* background-image: url(../imgs/banner.png); */
+    /* background-color:  #ffffff53; */
     background-attachment: fixed;
     color: black;
+}
+
+.vetor {
+    background-image: url(../imgs/vetor.body.png);
+background-attachment: fixed;
+    
+
 }
 
 .container {
@@ -15,7 +22,9 @@ body {
 
 #primeiroH1 {
     /* border: white solid 3px; */
-    font-size: 2.8vw;
+    font-size: 3.2vw;
+    font-family: 'Shalimar', cursive;
+    font-weight: 100;
 }
 
 .header {
@@ -42,20 +51,22 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    
+
 }
 
 #arte {
     /* border: solid 3px rgb(112, 218, 213); */
     /* color: white; */
-    padding: 18% 12% 18% 12%;
+    padding: 16% 12% 18% 12%;
     text-align: center;
-    font-size: 2.5vw;
+    font-size: 4.5vw;
+    font-family: 'Shalimar', cursive;
+    font-weight: 100;
 }
 
 .header {
     /* border: solid 3px rgb(75, 8, 16); */
-    background: linear-gradient(to bottom, #0000009f, #41210300);
+    background: linear-gradient(to bottom, #00ffee88, #41210300);
     display: flex;
     /* color: white; */
 }
@@ -71,7 +82,7 @@ body {
 }
 
 
-ul {
+.header ul {
     /* border: solid 3px rgb(18, 75, 8); */
     align-items: center;
     width: 30%;
@@ -81,15 +92,15 @@ ul {
     list-style: none;
 }
 
-li {
+.header li {
     /* border: solid 3px rgb(75, 37, 8); */
     font-family: 'Times New Roman', Times, serif;
-    font-size: 1.5vw;
+    font-size: 1.6vw;
     padding: 5px;
     transition: all .2s;
 }
 
-li:hover {
+.nav li:hover {
     transform: scale(1.1);
 }
 
@@ -147,12 +158,14 @@ li:hover {
 
 
 .vanGogh .container {
-    border: solid rgba(37, 172, 136, 0.528) 1px;
-    /* border-radius: 20px; */
-    /* border-image: linear-gradient(#00ffee, #090544) 30; */
-    /* border-width: 3px;
-    border-style: solid; */
-    /* background-color: rgba(19, 173, 166, 0.685); */
+    
+    /* border-image: linear-gradient(#00ffee, #090544) 30;  */
+     /* border-width: 5px; 
+    border-style: solid ; */
+    /* background-color: rgba(0, 0, 0, 0.959); */
+    background-image: url(../imgs/banner.van.png);
+    /* background-attachment: fixed; */
+    /* background-attachment: scroll; */
     display: flex;
     align-items: center;
     /* justify-content: space-around; */
@@ -162,6 +175,7 @@ li:hover {
     margin-top: 50px;
     /* width: 70%;
     width: 70%; */
+    background-position: center;
     height: 35vw;
 
 
@@ -187,12 +201,15 @@ li:hover {
 
 .vanGogh_historiac h1 {
     /* border: solid rgb(239, 162, 112) 3px; */
-    font-size: 2.8vw;
+    font-size: 5vw;
+    font-family: 'Shalimar', cursive;
+    font-weight: 100;
     /* color: white; */
 }
 
 .vanGogh img {
-    height: 30vw;
+    height: 24vw;
+    width: 28vw;
     /* border: solid rgb(255, 255, 255) 3px; */
 }
 
@@ -227,42 +244,213 @@ li:hover {
 
 } */
 
+.modal {
+    position: fixed;
+    width: 60%;
+    top: 1%;
+    left: 18%;
+    padding: 2%;
+    background-color: rgb(0, 0, 0);
+    /* opacity: 0; */
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    border-radius: 15px;
+    transition: all 1s;
+}
+
+/* .modal :hover {
+    transform: scale(1.1);
+} */
+
+.modal p {
+    font-size: 1.5vw;
+    text-align: justify;
+}
+
+.modal:target {
+    /* opacity: 1; */
+    display: flex;
+    pointer-events: auto;
+    
+}
+
+.menos {
+    text-decoration: none;
+    font-size: 1vw;
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+    padding: 1%;
+    width: 12%;
+
+}
+
+.mais {
+    text-decoration: none;
+    font-size: 1vw;
+    color: white;
+    background-color: #090544;
+    border-radius: 15px;
+    padding: 2%;
+
+}
 
 /*/////////////////////////////// obras /////////////////////*/
 
-#h1_obras{
+.span_titulos {
     /* color: white; */
-    font-size: 2vw;
+    font-size: 8vw;
     text-align: center;
+    font-family: 'Shalimar', cursive;
+    font-weight: 20;
+    /* border: #bd2727 solid 3px; */
+    margin: 0;
+    padding: 0;
 }
+
 .obras .container {
     /* border: #00FFF0 solid 3px; */
-    width: 90%;
+    /* width: 90%; */
 }
 
-.imagens_obras {
-    /* border: solid 3px indigo; */
-    /* display: flex;
+.obras {
+    /* border: #ff09b5 solid 3px; */
+    /* width: 90%; */
+}
+
+.carrossel {
+    width: 65.5vw;
+    height: 388px;
+    outline: 3px solid #09054457;
+    margin: 15px auto 25px auto;
+    padding: 0 0 0 0.4%;
+
+    box-shadow: -15px 5px 25px #090544c7;
+    overflow: hidden;
+}
+
+.carrossel ul {
+    /* border: solid 3px lawngreen; */
+    display: flex;
+    align-items: center;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* width: 600vw;
+    height: 600vw; */
+}
+
+.carrossel li {
+    padding: 1% 1% 1% 0;
+    /* border: 1px solid rgb(255, 3, 3); */
+    position: relative;
+    animation: slide 18s infinite ease-out;
+}
+
+@keyframes slide {
+    0% {
+        left: 0px
+    }
+
+    10% {
+        left: 0px;
+    }
+
+    20% {
+        left: -450px;
+    }
+
+    30% {
+        left: -450px;
+    }
+
+    40% {
+        left: -900px;
+    }
+
+    50% {
+        left: -900px;
+    }
+
+    60% {
+        left: -1350px;
+    }
+
+    70% {
+        left: -1350px;
+    }
+
+    80% {
+        left: -1800px;
+    }
+
+    90% {
+        left: -1800px;
+    }
+
+    100% {
+        left: 0px;
+    }
+
+}
+/*///////////////////////////////////////// button mais obras /////////////////////*/
+
+.todasObras{
+    /* border: solid 3px lawngreen; */
+}
+.todasObras .container{
+    /* border: solid 3px rgb(38, 0, 252); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todasObras button{
+    /* border: solid 3px lightcoral; */
+    background-color: #090544;
+    border-radius: 15px;
+    padding: 2%;
+    color: white;  
+    transition: all 0.4s ;
+}
+#mostrar_obras{
+    font-size: 1.6vw;
+
+}
+
+.todasObras button:hover{
+        background:#00FFF0;
+}
+
+/* .imagens_obras {
+    border: solid 3px indigo;
+    display: flex; 
     justify-content: space-around;
     padding-top: 3%;
-    padding-bottom: 0.5%; */
+    padding-bottom: 0.5%; 
 
+} */
+
+/* .imagens_obras img {
+    border: solid 3px rgb(214, 19, 19);
+    width: 35%; 
+    
 }
-
-.imagens_obras img {
-    /* border: solid 3px rgb(214, 19, 19); */
-    width: 35%;
-}
+    */
 
 
-.texto {
+/* .texto {
     border: solid rgb(77, 255, 0) 3px;
-    /* color: black; */
+    color: black;
     width: 40%;
     font-size: 1.8vw;
     
-}
-.imagens_obras .legenda1:hover {
+} */
+/* .imagens_obras .legenda1:hover {
     transform: scale(1.1);
 }
 .imagens_obras .legenda2:hover {
@@ -279,12 +467,12 @@ li:hover {
 }
 .imagens_obras .legenda6:hover {
     transform: scale(1.1);
-}
+} */
 
-.legenda1 {
-    /* border: solid rgb(206, 90, 128) 3px; */
+/* .legenda1 {
+    border: solid rgb(206, 90, 128) 3px;
     background-color: #9dbcbc;
-    /* border-radius: 15px; */
+    border-radius: 15px;
     padding: 2% 0 2% 0;
     margin-top: 1%;
     margin-bottom: 1%;
@@ -293,10 +481,10 @@ li:hover {
     justify-content: space-around;
     align-items: center;
     transition: all .4s;
-}
-.legenda2 {
-    /* border: solid rgb(206, 90, 128) 3px; */
-    /* padding: 0 0 0 4%; */
+} */
+/* .legenda2 {
+    border: solid rgb(206, 90, 128) 3px;
+    padding: 0 0 0 4%;
     background-color: #8acbb5;
     display: flex;
     justify-content: center;
@@ -306,10 +494,10 @@ li:hover {
     margin-top: 1%;
     margin-bottom: 1%;
     transition: all .4s;
-}
-.legenda3 {
-    /* border: solid rgb(206, 90, 128) 3px; */
-    /* padding: 0 0 0 4%; */
+} */
+/* .legenda3 {
+    border: solid rgb(206, 90, 128) 3px;
+    padding: 0 0 0 4%;
     background-color: #f7e9aa;
     display: flex;
     justify-content: center;
@@ -319,10 +507,10 @@ li:hover {
     margin-top: 1%;
     margin-bottom: 1%;
     transition: all .4s;
-}
-.legenda4 {
-    /* border: solid rgb(206, 90, 128) 3px; */
-    /* padding: 0 0 0 4%; */
+} */
+/* .legenda4 {
+    border: solid rgb(206, 90, 128) 3px;
+    padding: 0 0 0 4%;
     background-color: #eb9d8d;
     display: flex;
     justify-content: center;
@@ -334,7 +522,7 @@ li:hover {
     transition: all .4s;
 }
 .legenda5 {
-    /* border: solid rgb(206, 90, 128) 3px; */
+    border: solid rgb(206, 90, 128) 3px;
     display: flex;
     justify-content: center;
     justify-content: space-around;
@@ -344,11 +532,11 @@ li:hover {
     margin-top: 1%;
     margin-bottom: 1%;
     transition: all .4s;
-    /* padding: 0 0 0 4%; */
-}
-.legenda6 {
-    /* border: solid rgb(206, 90, 128) 3px; */
-    /* padding: 0 0 0 4%; */
+    padding: 0 0 0 4%;
+} */
+/* .legenda6 {
+    border: solid rgb(206, 90, 128) 3px;
+    padding: 0 0 0 4%;
     background-color: #b998b3;
     display: flex;
     justify-content: center;
@@ -358,7 +546,7 @@ li:hover {
     margin-top: 1%;
     margin-bottom: 1%;
     transition: all .4s;
-}
+} */
 
 
 /*//////////////////////// somos ///////////////////////////////*/
@@ -413,73 +601,95 @@ li:hover {
 
 }
 
-/*//////////////////////////// footer //////////////////*/
-.footer{
-    /* border: rgb(255, 238, 2) solid 3px; */
-    /* background: linear-gradient(to bottom, #00ffee30, #00ffee0c); */
-   background-color: black;
-   height: 86px;
-    color: white;
-    
-}
-.footer .container{
-    /* border: rgb(0, 0, 0) solid 3px; */
-    height: 110px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 6%;
-    height: 86px;
-    
-}
-
-.footer h2{
-    /* border: solid 3px indianred; */
-    padding-top: 2%;
-    margin: 0%;
-}
-.footer p{
-    padding-bottom: 1%;
-    /* border: solid 3px indianred; */
-    margin: 1%;
-}
 
 /*//////////////////////////////// cartas /////////////////*/
-/* .cartas{
+.cartas{
 border: 3px solid orange;
 margin-top: 10%;
 
 }
 
 .cartas .container{
-    border-image: linear-gradient(#00ffee82, #160c9f5d) 30;
-    border-width: 1px;
-    border-style: solid;
+    /* border-image: linear-gradient(#00ffee82, #160c9f5d) 30;
+    border-width: px;
+    border-style: solid; */
+    /* background-color: #00ffee6c; */
     display: flex;
     align-items: center;
     padding-top: 2%;
     padding-bottom: 2%;
-
+    /* border-radius: 15px; */
+    background-image: url(../imgs/banner.cartas.png);
+    background-position: center;
+    height: 28vw;
 }
 .cartas img{
-    height: 40vw;
+    height: 25vw;
+    width: 22vw;
 }
 
 
 .cartas .img2{
-    border: #00FFF0 solid 3px;
+    border: #000000 solid 3px;
     display: flex;
     justify-content: center;
     width: 50%;
 }
 
-
+.msg_cartas{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border: solid palevioletred 3px;
+    align-items: center;
+}
 .cartas p{
     
     border: #bd2727 solid 3px;
-    color: white;
+    color: black;
     font-size: 2vw;
-    width: 45%;
     height: auto;
     text-align: justify;
-} */
+}
+
+
+/*/////////////// indicacao  ///////////*/
+.indicacao{
+    margin: 100px auto 20px auto;
+}
+
+/*//////////////////////////// footer //////////////////*/
+
+.footer {
+    /* border: rgb(255, 238, 2) solid 3px; */
+    /* background: linear-gradient(to bottom, #00ffee30, #00ffee0c); */
+    background-color: black;
+    height: auto;
+    color: white;
+
+}
+
+.footer .container {
+    /* border: rgb(0, 0, 0) solid 3px; */
+    height: 92px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6%;
+
+}
+
+.footer h2 {
+    /* border: solid 3px indianred; */
+    /* padding-top: 1%; */
+    margin: 0%;
+}
+
+.footer p {
+    /* padding-bottom: 1%; */
+    /* border: solid 3px indianred; */
+    /* margin: 1%; */
+    margin: 0%;
+}
+/*///////////////// 

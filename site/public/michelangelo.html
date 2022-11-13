@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art by Vincent</title>
+</head>
+<body onload="alou()">
+
+    <div id="alo" ></div>
+    
+</body>
+</html>
+
+<script>
+    function alou() {
+
+        fetch(`/usuarios/countMichelangelo`)
+            
+            .then(function (resposta) {
+                if (resposta.ok) {
+                    if (resposta.status == 204) {
+
+                        throw "Nenhum resultado encontrado!!";
+                    }
+
+                    resposta.json().then(function (resposta) {
+                        var countMichelangelo = resposta[0].countMichelangelo
+                        alo.innerHTML = `alo michelangelo ${countMichelangelo} `
+                        console.log("Dados recebidos: ", JSON.stringify(resposta));
+                    });
+                } else {
+                    throw ('Houve um erro na API!');
+                }
+            }).catch(function (resposta) {
+                console.error(resposta);
+
+            });
+
+    }
+
+
+        
+    
+</script>

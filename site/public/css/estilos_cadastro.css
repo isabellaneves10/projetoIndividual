@@ -1,7 +1,7 @@
 body {
     margin: 0;
     background-color: #ffffff;
-    color: black;
+    /* color: black; */
 
 }
 
@@ -13,12 +13,13 @@ body {
 #primeiroH1 {
     /* border: white solid 3px; */
     font-size: 2.8vw;
+    color: white;
 }
 
 .header {
     /* border: solid 3px orchid; */
     height: 95px;
- 
+
 }
 
 .header .container {
@@ -32,25 +33,26 @@ body {
 
 .header {
     /* border: solid 3px rgb(75, 8, 16); */
-    background: linear-gradient(to bottom, #00ffeec5, #00ffee00);
-    /* background:  #00ffee; */
+    /* background: linear-gradient(to bottom, #000000c5, #00ffee00); */
+    background: black;
     display: flex;
     align-items: center;
     /* color: white; */
 }
 
-#conta{
+#conta {
     /* border: #00ffee40 solid 1px; */
-    color: #ffffff;
-    background:#000000;
+    color: black;
+    background: #00FFF0;
     border-radius: 20px;
     padding: 2% 10%;
     text-decoration: none;
     width: 40%;
-   
+
 }
+
 .ref {
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -83,18 +85,19 @@ li {
 li:hover {
     transform: scale(1.1);
 }
-   
+
 
 
 
 /*/////////////////////////////// form ///////////////////*/
-.cadastro .container{
+.cadastro .container {
     /* border: solid 3px rgb(41, 193, 46); */
     display: flex;
     height: auto;
-   
+
 }
-.gif{
+
+.gif {
     margin-top: 2%;
     /* border: solid 3px rgb(118, 120, 255); */
     height: 35vw;
@@ -102,36 +105,37 @@ li:hover {
     width: 100%;
 }
 
-.gif2 img{
-    width:100%;
+.gif2 img {
+    width: 100%;
     height: 100%;
-    border-radius:20px;
-}
-.gif1 img{
-    width:100%;
-    height: 100%;
-    border-radius:20px;
+    border-radius: 20px;
 }
 
-.gif1{
+.gif1 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.gif1 {
     /* border: solid 3px rgb(240, 29, 29); */
     position: absolute;
     margin-top: 8vw;
     margin-left: 8vw;
-    width:76%;
+    width: 74%;
     height: 72%;
 }
 
-.gif2{
+.gif2 {
     /* border: solid 3px rgb(0, 8, 255); */
     position: absolute;
     margin-top: 2vw;
-    width:70%;
-    height: 80%;
+    width: 66%;
+    height: 76%;
 }
 
 
-.form{
+.form {
     /* border: white solid 1px; */
     width: 70%;
     height: 80%;
@@ -140,25 +144,26 @@ li:hover {
     justify-content: center;
     align-items: center;
     display: flex;
-    
+
 }
 
 input::placeholder {
-    font-size:1.4vw;
+    font-size: 1.4vw;
     color: rgba(0, 0, 0, 0.7);
     padding: 2% 6% 2%;
 }
 
-.form h1{
+.form h1 {
     font-size: 3vw;
 
 }
-.inputs p{
+
+.inputs p {
     /* border: solid 3px olive; */
     font-size: 1vw;
 }
 
-.inputs{
+.inputs {
     /* border: solid teal 3px; */
     /* justify-content: space-around; */
     display: flex;
@@ -169,8 +174,8 @@ input::placeholder {
     padding: 2%;
 }
 
-.input{
-    border: solid 2px #00FFF0 ;
+.input {
+    border: solid 2px #00FFF0;
     color: rgb(0, 0, 0);
     display: flex;
     border-radius: 15px;
@@ -181,7 +186,7 @@ input::placeholder {
     transition: all .3s;
 }
 
-.form button{
+.form button {
     background-color: #00ffeeb5;
     border: #00FFF0 solid 1px;
     border-radius: 12px;
@@ -194,50 +199,42 @@ input::placeholder {
 button:hover {
     transform: scale(1.1);
 }
+
 .input:hover {
     transform: scale(1.1);
 }
 
 /*//////////////////////////// footer //////////////////*/
 
-.footer{
+.footer {
     /* border: rgb(255, 238, 2) solid 3px; */
     /* background: linear-gradient(to bottom, #00ffee30, #00ffee0c); */
-   background-color: black;
-    height: 86px;
+    background-color: black;
+    height: auto;
     color: white;
-    
+
 }
-.footer .container{
+
+.footer .container {
     /* border: rgb(0, 0, 0) solid 3px; */
-    height: 110px;
+    height: 92px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin-top: 6%;
-    height: 86px;
-    
+
 }
 
-.footer h2{
+.footer h2 {
     /* border: solid 3px indianred; */
-    padding-top: 2%;
+    /* padding-top: 1%; */
     margin: 0%;
 }
-.footer p{
-    padding-bottom: 1%;
+
+.footer p {
+    /* padding-bottom: 1%; */
     /* border: solid 3px indianred; */
-    margin: 1%;
+    /* margin: 1%; */
+    margin: 0%;
 }
-
-
-
-
-
-
-
-
-
-
-
-

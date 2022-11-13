@@ -8,7 +8,7 @@
     <title>Art by vincent</title>
     <link rel="icon" type="image/png" sizes="32x32" href="imgs/logo.png">
     <link rel="stylesheet" href="./css/estilos_index.css">
-    
+
 </head>
 
 <body onload="qtdCadastrados()">
@@ -49,71 +49,133 @@
             </div>
         </div>
     </div> -->
+    <div class="vetor">
 
-    <div class="vanGogh">
-        <div class="container">
+        <div class="vanGogh">
+            <div class="container">
 
 
-            <div class="vanGogh_historiac">
+                <div class="vanGogh_historiac">
 
-                <h1>Vincent Van Gogh</h1>
+                    <h1>Vincent Van Gogh</h1>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id aspernatur obcaecati iste, rem mollitia inventore asperiores, totam necessitatibus repudiandae optio praesentium tempore dignissimos ipsam. Ratione facere dicta pariatur odit alias.
-                </p>
-                
-                <!-- <button onclick="maisDetalhes()">Mais detalhes</button> -->
-                
+                    <p>Vincent van Gogh (1853-1890) foi um importante pintor holandês, um dos maiores representantes da
+                        pintura pós-impressionista.
+                    </p>
+
+                    <a class="mais" href="#mais">Mais detalhes</a>
+
+                    <div id="mais" class="modal">
+                        <h2>Sobre Vincent Van Gogh</h2>
+                        <p> A influência dos artistas impressionistas e a crescente admiração pela arte oriental levou
+                            Van Gogh a desenvolver um estilo próprio. O artista toma de uns a prática de construir a
+                            figura por meio de pinceladas separadas, e de outros as cores fortes e definidas.
+                            <br>
+                            <br>
+                            Em dois anos, Van Gogh pintou 200 quadros, entre eles, o Autorretrato (1887) e Retrato de
+                            Père
+                            Tanguy (1887-1888)
+                            <br>
+                            <br>
+                            O termo Pós-Impressionismo só surgiu em 1910 quando o crítico e artista Roger Fry organizou
+                            uma exposição intitulada “Manet e os Pós Impressionistas”, onde os principais artistas eram
+                            Cézanne, Gauguin e Van Gogh.
+                            <!-- <br>
+                            <br> -->
+                            <!-- Em 1888, Van Gogh encontra-se com a saúde precária e segue os conselhos de Toulouse-Lautrec,
+                            vai para o campo e em fevereiro está em Arles, pintando ao ar livre.
+                            Na época, Van Gogh pinta suas obras mais importantes -->
+                            <br>
+                            <br>
+                            Vincent van Gogh morreu em Auvers, França, em 29 de julho de 1890. No dia de sua morte, no
+                            sótão da Galeria Goupil, em Paris, 700 quadros amontoavam-se sem comprador.
+
+                           
+
+
+                            <!-- Em 1888, vai para o campo e em fevereiro está em Arles, pintando ao ar livre.
+                                
+                                Na época, Van Gogh pinta suas obras mais importantes, foram mais de 100 quadros. -->
+                        </p>
+                        <a href="#menos" class="menos">Menos detalhes</a>
+                    </div>
+
+                </div>
+
+                <div class="img">
+
+                    <img src="imgs/auto_retrato.png">
+                </div>
+
             </div>
+        </div>
+
+        <!-- <div class="vanGogh">
+        <div class="container">
             
+
             <div class="img">
                 
                 <img src="imgs/vincent.png">
             </div>
-            
-        </div>
-    </div>
-
-    <div class="vanGogh">
-        <div class="container">
-
-
-            <div class="img">
-                
-                <img src="imgs/vincent.png">
-            </div>
             <div class="vanGogh_historiac">
 
                 <h1>Vincent Van Gogh</h1>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id aspernatur obcaecati iste, rem mollitia inventore asperiores, totam necessitatibus repudiandae optio praesentium tempore dignissimos ipsam. Ratione facere dicta pariatur odit alias.
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id aspernatur obcaecati iste, rem mollitia
+                    inventore asperiores, totam necessitatibus repudiandae optio praesentium tempore dignissimos ipsam.
+                    Ratione facere dicta pariatur odit alias.
                 </p>
-                
-                <!-- <button onclick="maisDetalhes()">Mais detalhes</button> -->
-                
+
+
             </div>
-            
-            
+
+
         </div>
-    </div>
-    
+    </div> -->
+
         <div class="somos">
             <div class="container">
                 <div id="ja_somos"> </div>
-    
+
                 <div id="cadastre">
                     <a class="ref2" href="cadastro.html">Cadastre-se para pintar como Vincent Van Gogh</a>
                 </div>
             </div>
         </div>
 
-    <div class="obras">
-        <div class="container">
-            <div id="h1_obras" >
-                <h1>Obras mais famosas</h1>
+        <div class="obras">
+            <div class="container">
+                <div id="h1_obras">
+                    <h2 class="span_titulos" >Obras mais famosas </h2> 
+                </div>
+
+                <div class="carrossel">
+
+                    <ul>
+                        <li> <img src="imgs/noite_estrelada.png"> </li>
+
+                        <li> <img src="imgs/girassois.png"> </li>
+
+                        <li> <img src="imgs/lirios.png"> </li>
+
+                        <li> <img src="imgs/amendoeira.png"> </li>
+
+                        <li> <img src="imgs/auto_retrato2.png"> </li>
+
+                        <li> <img src="imgs/quarto.png"> </li>
+
+
+                    </ul>
+
+                </div>
+
+
             </div>
+        </div>
 
 
-            <div class="imagens_obras"> 
+        <!-- <div class="imagens_obras"> 
 
                 <div class="legenda1">
                     <img src="imgs/noite_estrelada.png">
@@ -131,40 +193,40 @@
                     <img src="imgs/lirios.png">
                     <p class="texto">Lírios, 1889<br>
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil sapiente quisquam nostrum accusantium sed, nesciunt impedit, maxime nam eius quod asperiores in libero consequuntur nobis fugit dignissimos minima debitis quasi!</p>
-                </div>
+                </div> -->
 
-            <!-- </div> -->
+        <!-- </div> -->
 
 
-            <!-- <div class="imagens_obras"> -->
+        <!-- <div class="imagens_obras"> -->
 
-                <!-- <div class="legenda3">
+        <!-- <div class="legenda3">
                     <img src="imgs/comedores_de_batata.png">
                     <p class="texto">Os Comedores de Batata, 1885</p>
                 </div> -->
 
 
-            <!-- </div> -->
+        <!-- </div> -->
 
 
-            <!-- <div class="imagens_obras"> -->
+        <!-- <div class="imagens_obras"> -->
 
-                <!-- <div class="legenda5">
+        <!-- <div class="legenda5">
                     <img src="imgs/auto_retrato.png">
                     <p class="texto">Autorretrato, 1889</p>
                 </div> -->
 
-                <div class="legenda4">
+        <!-- <div class="legenda4">
                     <img src="imgs/quarto.png">
                     <p class="texto">O quarto em Arles, 1888<br>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut velit incidunt quos exercitationem temporibus libero illo rem placeat tenetur, sequi non quia. Eveniet suscipit, rerum ratione quaerat dolorum deleniti placeat.</p>
-                </div>
+                </div> -->
 
-            <!-- </div> -->
+        <!-- </div> -->
 
-            <!-- <div class="imagens_obras"> -->
+        <!-- <div class="imagens_obras"> -->
 
-                <div class="legenda5">
+        <!-- <div class="legenda5">
                     <img src="imgs/auto_retrato2.png">
                     <p class="texto">Auto Retrato com a Orelha Cortada 1888<br>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae, numquam! Sit, incidunt necessitatibus natus modi rem adipisci esse voluptas a nisi veniam eos! Totam aliquid alias labore, sapiente nostrum mollitia?</p>
@@ -179,40 +241,78 @@
 
 
         </div>
-    </div>
-
-    <!-- <div class="cartas">
-        <div class="container" >
-
-            <div class="img2" >
-                <img src="./imgs/cartas.jpg">
-            </div>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto soluta laborum officiis ex? Distinctio corporis earum, delectus quam ullam dolore ut molestias quaerat, consectetur adipisci quasi provident laborum porro facere.</p>
-
-        </div>
-
     </div> -->
 
-
-
-    <div class="footer">
+    
+    <div class="todasObras">
         <div class="container">
-            <h2>Art by Vincent</h2>
-            <p>desenvolvido por Isabella Neves</p>
+            
+            <button onclick="mostrarObras()">Clique aqui para ver o nome de todas as obras de Van Gogh</button>
 
+            </div>
+        <div class="container">
+
+                <div id="mostrar_obras"></div>
+            </div>
+        </div>
+
+
+        <div class="cartas">
+        <div class="container" >
+    
+            <div class="img2" >
+                <img src="./imgs/cartas.png">
+            </div>
+          <div class="msg_cartas" >
+
+              <span class="span_titulos" >Cartas</span> 
+              <p> A fama só veio após sua morte. Grande parte de sua história está descrita nas 750 cartas que escreveu para seu irmão Theo.
+                  e que evidenciava a forte ligação entre os dois.</p>
+                </div>
+    
+        </div>
+    
+    </div>
+    
+    <div class="indicacao">
+        <div class="container">
+           <h2 class="span_titulos" >indicações cinematograficas</h2>
+           <iframe width="49%" height="400vw" src="https://www.youtube.com/embed/3tslxWf9t5w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+           <iframe width="49%" height="400vw" src="https://www.youtube.com/embed/onZwywZi9hU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+    
         </div>
     </div>
 
-</body>
+<div class="indicacao">
+     <div class="container">
+        <h2 class="span_titulos" >Indicações literárias</h2>
 
-</html>
+        <iframe type="text/html" sandbox="allow-scripts allow-same-origin allow-popups" width="336" height="550" frameborder="0" allowfullscreen style="max-width:100%" src="https://ler.amazon.com.br/kp/card?asin=B00AQMQMPO&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_BX3WXKAR2GY497S3D6Y9" ></iframe>
 
-<script>
+        
 
-    function qtdCadastrados() {
-        fetch(`/usuarios/cadastrados`)
+     </div>
+</div>
 
+        <div class="footer">
+            <div class="container">
+                <h2>Art by Vincent</h2>
+                <p>desenvolvido por Isabella Neves</p>
+                
+            </div>
+        </div>
+        
+    </body>
+    
+    </html>
+    
+    <script>
+
+        function qtdCadastrados() {
+            fetch(`/usuarios/cadastrados`)
+            
             .then(function (resposta) {
                 if (resposta.ok) {
                     if (resposta.status == 204) {
@@ -234,6 +334,50 @@
             });
 
     }
+
+    function mostrarObras() {
+
+        mostrar_obras.innerHTML =
+            `<br>*A Igreja em Nuenen, 1884 <br>
+*Os Comedores de Batata, 1885<br>
+*A Casa Paroquial de Nuenen, 1885<br>
+*Caveira com Cigarro Aceso, 1886<br>
+*Guinguette de Montmartre, 1886<br>
+*A Italiana, 1887<br>
+*A Ponte Debaixo da Chuva, 1887<br>
+*Natureza Morta com Absinto, 1887<br>
+*Dois Girassóis Cortados, 1887<br>
+*Auto-Retrato com Chapéu de Palha, 1887<br>
+*Pai Tanguy, 1887-1888<br>
+*Auto-Retrato Dedicado a Gauguin, 1888<br>
+*Terraço do Café na Praça do Fórum, 1888<br>
+*A Casa Amarela, 1888<br>
+*Barcos de Saintes-Maries, 1888<br>
+*O Velho Moinho, 1888<br>
+*La Mousmé, 1888<br>
+*A Vinha Vermelha, 1888<br>
+*Girassóis, 1888<br>
+*O Quarto em Arles, 1889<br>
+*Noite Estrelada, 1889<br>
+*Auto-Retrato com Orelha Cortada, 1888<br>
+*Oliveiras, 1889<br>
+*Os Ciprestes, 1889<br>
+*A Sesta, 1890<br>
+*A Ronda dos Prisioneiros, 1890<br>
+*Amendoeiras, 1890<br>
+*A Igreja de Auvers, 1890<br>
+*Trigal com Corvos, 1890<br>
+*Retrato de Dr, Gachet, 1890<br><br>
+
+<button onclick="naoMostrarObras()">ver menos</button>`
+
+    }
+
+    function naoMostrarObras() {
+        mostrar_obras.innerHTML = ""
+
+    }
+
 
 
 </script>

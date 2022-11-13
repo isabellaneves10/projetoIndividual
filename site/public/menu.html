@@ -17,9 +17,14 @@
     <div class="container">
 
         
-           <li> <div id="msg_numero_usuario"></div></li>
+        <li> <div id="msg_numero_usuario"></div></li>
+        <ul>
 
-            <li> <a class="ref" href="entrar.html">Logout</a></li>
+            <li id="aqui">Menu</li>
+            <li>|</li>
+            <li> 
+                <a class="ref" href="entrar.html">Logout</a></li>
+        </ul>
        
 
     </div>
@@ -63,29 +68,31 @@
 <script>
 
     function numeroCadastro() {
-        fetch(`/usuarios/numeroUsuario`)
+    //     fetch(`/usuarios/numeroUsuario`)
 
-            .then(function (resposta) {
-                if (resposta.ok) {
-                    if (resposta.status == 204) {
+    //         .then(function (resposta) {
+    //             if (resposta.ok) {
+    //                 if (resposta.status == 204) {
 
-                        throw "Nenhum resultado encontrado!!";
-                    }
+    //                     throw "Nenhum resultado encontrado!!";
+    //                 }
 
-                    resposta.json().then(function (resposta) {
-                        var numeroUsuario = resposta[0].numeroUsuario
-                        msg_numero_usuario.innerHTML = `Número de usuário é : ${numeroUsuario} `
-                        console.log("Dados recebidos: ", JSON.stringify(resposta));
-                    });
-                } else {
-                    throw ('Houve um erro na API!');
-                }
-            }).catch(function (resposta) {
-                console.error(resposta);
+    //                 resposta.json().then(function (resposta) {
+    //                     var numeroUsuario = resposta[0].numeroUsuario
+    //                     msg_numero_usuario.innerHTML = `Número de usuário é : ${numeroUsuario} `
+    //                     console.log("Dados recebidos: ", JSON.stringify(resposta));
+    //                 });
+    //             } else {
+    //                 throw ('Houve um erro na API!');
+    //             }
+    //         }).catch(function (resposta) {
+    //             console.error(resposta);
 
-            });
-
-    }
-
+    //         });
+    
+    msg_numero_usuario.innerHTML = `Número de usuário é : ${sessionStorage.id_usuario} `
+     }
+    
+    
 
 </script>

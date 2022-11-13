@@ -23,25 +23,24 @@ insert into usuario values
 
 select * from usuario;
 
-create table avaliacao(
-idAvaliacao int auto_increment,
+create table indicacaoObra(
+idIndicacaoObra int auto_increment,
 fkUsuario int ,
-constraint ctFk_Usuario foreign key (fkUsuario) references Usuario(id),
-primary key(idAvaliacao , fkUsuario), 
+foreign key (fkUsuario) references Usuario(id),
+primary key(idIndicacaoObra , fkUsuario), 
 
-nota varchar(2),
-descricao varchar(50)
+Obra varchar(15)
 );
 
+insert into indicacaoObra values
+( null , 1 , 'frida'),
+( null , 1 , 'michelangelo');
 
 
-insert into avaliacao values
-(null , 1 , '8' , 'muito bom'),
-(null , 2 , '8' , 'muito bom');
+select * from indicacaoObra ;
 
-
-select * from avaliacao ;
-
+select count(idIndicacaoObra) from indicacaoObra where Obra = 'frida';
+select count(idIndicacaoObra) as countMichelangelo from indicacaoObra where Obra = 'michelangelo';
 
 
 

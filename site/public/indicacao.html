@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art by Vincent</title>
+    <link rel="stylesheet" href="./css/estilos_indicacao.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="container">
+
+
+            <li>
+                <div id="msg_numero_usuario"></div>
+            </li>
+            <ul>
+
+                <li> <a href="menu.html">Menu</a></li>
+                <li>|</li>
+                <li>
+                    <a class="ref" href="entrar.html">Logout</a>
+                </li>
+            </ul>
+
+
+        </div>
+    </div>
+
+
+    <div class="conteudo">
+        <div class="container">
+            <h2 class="span_titulos">Qual obra você mais gosta?</h2>
+            <div class="img">
+                <div class="div">
+                    <img src="./imgs/michelangelo.indicacao.png">
+                    <button onclick="primeira_obra()">Primeiro obra</button>
+                </div>
+
+                <div class="div">
+                    <img src="./imgs/frida.indicacao.png">
+                    <button onclick="segunda_obra()">Segunda obra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="footer">
+        <div class="container">
+            <h2>Art by Vincent</h2>
+            <p>desenvolvido por Isabella Neves</p>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+    function primeira_obra() {
+
+        fetch("/usuarios/indicacaoObra", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+
+                fkUsuarioServer: sessionStorage.id_usuario,
+                obraServer: 'michelangelo',
+
+
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                alert(`redirecionando a página`)
+
+                setTimeout(() => {
+                    window.location = "michelangelo.html";
+                }, "2000")
+
+            } else {
+                alert('ok2');
+
+            }
+
+        });
+
+        return false;
+    }
+
+    function segunda_obra() {
+
+        fetch("/usuarios/indicacaoObra", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+
+                fkUsuarioServer: sessionStorage.id_usuario,
+                obraServer: 'frida',
+
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                alert(`redirecionando a página`)
+            
+                setTimeout(() => {
+                    window.location = "frida.html";
+                }, "2000")
+
+            } else {
+                alert('ok2');
+
+            }
+
+        });
+
+        return false;
+    }
+
+
+
+
+
+</script>

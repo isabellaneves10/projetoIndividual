@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Shalimar&display=swap');
+
 body {
     margin: 0;
     background-color: #ffffff;
@@ -103,68 +105,63 @@ li:hover {
 }
 
 #msg_numero_usuario {
-    border: solid rgb(43, 205, 28) 3px;
+    border: solid rgb(178, 27, 90) 3px;
     /* color: white; */
     font-size: 1.5vw;
     width: 15vw;
     color: white;
 }
 
-/*//////////////////////// mensagem /////////////////////*/
+/*///////////conteudo ///////////////////*/
 
-#mensagem {
-    border: solid 3px lawngreen;
+.conteudo{
+    border: solid orange 3px;
+    margin-top: 30px;
+}
+.conteudo .container{
+    border: solid rgb(0, 0, 0) 3px;
+    height: 35vw;
 }
 
-#mensagem .container {
-    height: 36vw;
-    border: solid 3px rgb(0, 227, 252);
+
+.conteudo img{
+    border: solid rgb(29, 92, 228) 3px;
+    width: 90%;
+    /* margin: 10px; */
+    
+}
+.conteudo .div{
+    border: solid rgb(35, 192, 11) 3px;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-    justify-content: center;
-}
-
-#mensagem p {
-    border: solid 3px rgb(255, 231, 14);
-    /* color: white; */
-    font-size: 2.6vw;
-    text-align: center;
-
-}
-
-#escolha {
-    border: solid lightcoral 3px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-content: space-around;
-    margin-top: 0;
-    width: 15vw;
-}
-
-.conta {
-    /* background: #00ffeea4; */
-    border: #00ffee solid 2px;
-    border-radius: 20px;
-
-    color: #000000;
-    padding: 3%;
-    text-decoration: none;
     width: auto;
-    height: auto;
+    
+}
+
+.conteudo button{
+    border: solid 3px deeppink;
+    width: 30%;
     font-size: 1.5vw;
+    padding: 1%;
+    color: white;
+    background-color: #090544;
+    border-radius: 15px;
+    margin: 5px;
+
+}
+.conteudo .img{
+    border: solid rgb(17, 196, 212) 5px;
+    width: auto;
     display: flex;
-    align-items: center;
-    transition: all .2s;
-}
-
-.conta:hover {
-    transform: scale(1.1);
+    /* align-items: center; */
+    justify-content: center;
+   /* justify-content: space-around; */
 }
 
 
-/*//////////////////////// footer ///////////////////*/
+/*/////////////////////// footer  //////////////*/
 
 .footer {
     /* border: rgb(255, 238, 2) solid 3px; */
@@ -197,4 +194,16 @@ li:hover {
     /* border: solid 3px indianred; */
     /* margin: 1%; */
     margin: 0%;
+}
+
+/*/////////////// indicacao /////////////////*/
+.span_titulos {
+    /* color: white; */
+    font-size: 8vw;
+    text-align: center;
+    font-family: 'Shalimar', cursive;
+    font-weight: 20;
+    /* border: #bd2727 solid 3px; */
+    margin: 0;
+    padding: 0;
 }
