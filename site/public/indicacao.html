@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/estilos_indicacao.css">
 </head>
 
-<body>
+<body onload="numeroCadastro()">
 
     <div class="header">
         <div class="container">
@@ -135,7 +135,10 @@
         return false;
     }
 
-
+    function numeroCadastro() {
+  
+    msg_numero_usuario.innerHTML = `Número de usuário é : ${sessionStorage.id_usuario} `
+     }
 
 
 

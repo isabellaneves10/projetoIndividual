@@ -19,7 +19,21 @@ insert into usuario values
 (null ,'isabella' , 'isabella@email' , '123' , null),
 (null , 'mariana' , 'mariana@email' , '123' , null),
 (null ,'victor' , 'victor@email' , '123' , null),
-(null , 'lucas' , 'lucas@email' , '123' , null);
+(null , 'lucas' , 'lucas@email' , '123' , null),
+(null ,'eliete' , 'eliete@email' , '123' , null),
+(null , 'mateus' , 'mateus@email' , '123' , null),
+(null ,'jonas' , 'jonas@email' , '123' , null),
+(null ,'camily' , 'camily@email' , '123' , null),
+(null ,'lorem' , 'lorem@email' , '123' , null),
+(null ,'violeta' , 'violeta@email' , '123' , null),
+(null ,'jessica' , 'jessica@email' , '123' , null),
+(null ,'gabriela' , 'gabriela@email' , '123' , null),
+(null ,'gabriel' , 'gabriel@email' , '123' , null),
+(null ,'filipe' , 'filipe@email' , '123' , null),
+(null ,'marcos' , 'marcos@email' , '123' , null),
+(null ,'britnei' , 'britnei@email' , '123' , null),
+(null ,'estrela' , 'estrela@email' , '123' , null),
+(null , 'vera' , 'vera@email' , '123' , null);
 
 select * from usuario;
 

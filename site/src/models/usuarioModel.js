@@ -70,9 +70,17 @@ function cadastrados() {
 
 
 function countMichelangelo() {
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrados()");
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function countMichelangelo()");
     var instrucao = `
     select count(idIndicacaoObra) as countMichelangelo from indicacaoObra where Obra = 'michelangelo';
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+function countFrida() {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function countFrida()");
+    var instrucao = `
+    select count(idIndicacaoObra) as countFrida from indicacaoObra where Obra = 'frida';
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -105,6 +113,7 @@ module.exports = {
     indicacao,
     cadastroindicacao,
     indicacaoObra,
-    countMichelangelo
+    countMichelangelo,
+    countFrida
     // numeroUsuario,
 };
