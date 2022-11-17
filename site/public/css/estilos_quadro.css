@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Shalimar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Shalimar&display=swap');
+
 
 body {
     margin: 0;
-    background-image: url(../imgs/banner.png);
+    background-image: url(../imgs/vetor.body.png);
     background-attachment: fixed;
     background-position: center;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 
 }
 
@@ -90,10 +94,11 @@ li:hover {
 
 /*////////////////////////// canvas ///////////////////////*/
 .nav_inferior {
-    border: #00ffee 1px solid;
+    /* border: #00ffee 1px solid; */
     width: 80%;
     height: 15vw;
     display: flex;
+    margin-top: 1%;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -115,12 +120,12 @@ li:hover {
 }
 
 .canvas h1 {
-    border: solid 1px orange;
+    /* border: solid 3px orange; */
     width: auto;
     font-size: 3vw;
     margin: 0;
     margin-bottom: 1%;
-    color: white;
+    /* color: white; */
 
 }
 
@@ -145,10 +150,11 @@ li:hover {
 
 .conta {
     /* background: #00ffeea4; */
-    border: #00ffee40 solid 1px; 
+    border: #00ffee solid 2px; 
     border-radius: 20px;
 
-    color: #ffffff;
+    /* color: #ffffff; */
+    margin: 0.5%;
     padding: 1%;
     text-decoration: none;
     width: auto;
@@ -209,5 +215,5 @@ li:hover {
     /* border: #bd2727 solid 3px; */
     margin: 0;
     padding: 0;
-    color: white;
+    /* color: white; */
 }

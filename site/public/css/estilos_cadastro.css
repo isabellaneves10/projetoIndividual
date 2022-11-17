@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Shalimar&display=swap');
+
 body {
     margin: 0;
     background-color: #ffffff;
     /* color: black; */
+    font-family: 'Montserrat', sans-serif;
 
 }
 
@@ -14,6 +17,9 @@ body {
     /* border: white solid 3px; */
     font-size: 2.8vw;
     color: white;
+
+    font-family: 'Shalimar', cursive;
+    font-weight: 100;
 }
 
 .header {
@@ -48,12 +54,15 @@ body {
     padding: 2% 10%;
     text-decoration: none;
     width: 40%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 
 }
 
 .ref {
     color: white;
     text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -80,6 +89,8 @@ li {
     width: 50%;
     text-align: center;
     transition: all .2s;
+
+    
 }
 
 li:hover {
@@ -149,8 +160,9 @@ li:hover {
 
 input::placeholder {
     font-size: 1.4vw;
-    color: rgba(0, 0, 0, 0.7);
+    color: rgb(0, 0, 0);
     padding: 2% 6% 2%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .form h1 {
@@ -161,6 +173,7 @@ input::placeholder {
 .inputs p {
     /* border: solid 3px olive; */
     font-size: 1vw;
+    font-weight: 800;
 }
 
 .inputs {
