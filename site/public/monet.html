@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art by Vincent</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="./css/estilos_michelangelo.css">
+    <link rel="stylesheet" href="./css/estilos_monet.css">
 </head>
 <body onload="grafico()">
 
@@ -24,7 +24,7 @@
 <script>
     function grafico() {
 
-        fetch(`/usuarios/countMichelangelo`)
+        fetch(`/usuarios/countMonet`)
             
             .then(function (resposta) {
                 if (resposta.ok) {
@@ -35,9 +35,9 @@
 
                     resposta.json().then(function (resposta) {
 
-                        var countMichelangelo = resposta[0].countMichelangelo
-                        sessionStorage.countMichelangelo = countMichelangelo
-                        // alo.innerHTML = `alo michelangelo ${countMichelangelo} `
+                        var countMonet = resposta[0].countMonet
+                        sessionStorage.countMonet = countMonet
+                        // alo.innerHTML = `alo monet ${countMonet} `
                         console.log("Dados recebidos: ", JSON.stringify(resposta));
                     });
                 } else {
@@ -76,11 +76,7 @@
             });
 
         
-    
-</script>
 
-
-<script>
     // const labels = [
     //   '12:00',
     //   '13:00',
@@ -92,7 +88,7 @@
 
     const labels2 = [
       'Frida', 
-      'Michelangelo'
+      'Monet'
    
       
     ];
@@ -122,7 +118,7 @@
         label: 'indicação',
         backgroundColor: '#00ffee',
         // borderColor: 'rgb(196,1 , 8)',
-        data: [sessionStorage.countFrida , sessionStorage.countMichelangelo],
+        data: [sessionStorage.countFrida , sessionStorage.countMonet],
     //   },
     //   {
     //     label: 'Michelangelo',

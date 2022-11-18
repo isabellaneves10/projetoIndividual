@@ -46,20 +46,19 @@ body {
 #conta {
     /* border: #00ffee40 solid 1px; */
     color: black;
-    background: #00FFF0;
-    border-radius: 20px;
-    padding: 2% 10%;
     text-decoration: none;
-    width: 40%;
+    background-color: #ffffff;
+    padding: 10% 15% 10% 15%;
+    border-radius: 15px;
+
 
 }
 
 .ref {
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
-    background-color: #ffffff;
-    padding: 6% 10% 6% 10%;
-    border-radius: 15px;
+    list-style: none;
+   
 }
 
 

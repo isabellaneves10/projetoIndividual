@@ -20,10 +20,10 @@
             </li>
             <ul>
 
-                <li> <a href="menu.html">Menu</a></li>
+                <li> <a  class="ref" href="menu.html">Menu</a></li>
                 <li>|</li>
                 <li>
-                    <a class="ref" href="entrar.html">Logout</a>
+                    <a id="conta" href="entrar.html">Logout</a>
                 </li>
             </ul>
 
@@ -37,7 +37,7 @@
             <h2 class="span_titulos">Qual obra você mais gosta?</h2>
             <div class="img">
                 <div class="div">
-                    <img src="./imgs/michelangelo.indicacao.png">
+                    <img src="./imgs/monet.indicacao.png">
                     <button onclick="primeira_obra()">Primeiro obra</button>
                 </div>
 
@@ -76,7 +76,7 @@
             body: JSON.stringify({
 
                 fkUsuarioServer: sessionStorage.id_usuario,
-                obraServer: 'michelangelo',
+                obraServer: 'monet',
 
 
             })
@@ -88,7 +88,7 @@
                 alert(`redirecionando a página`)
 
                 setTimeout(() => {
-                    window.location = "michelangelo.html";
+                    window.location = "monet.html";
                 }, "2000")
 
             } else {
@@ -137,7 +137,7 @@
 
     function numeroCadastro() {
   
-    msg_numero_usuario.innerHTML = `Número de usuário é : ${sessionStorage.id_usuario} `
+    msg_numero_usuario.innerHTML = `Usuário : ${sessionStorage.id_usuario} `
      }
 
 

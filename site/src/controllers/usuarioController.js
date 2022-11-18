@@ -198,9 +198,9 @@ function cadastrados(req, res) {
      }
 
 
-function countMichelangelo(req, res) {
+function countMonet(req, res) {
       
-            usuarioModel.countMichelangelo()
+            usuarioModel.countMonet()
                 
             .then(
                 function (resultado) {
@@ -301,7 +301,7 @@ module.exports = {
     indicacao,
     cadastroindicacao,
     indicacaoObra,
-    countMichelangelo,
+    countMonet,
     countFrida
     // numeroUsuario
 }

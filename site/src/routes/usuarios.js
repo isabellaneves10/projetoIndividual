@@ -35,8 +35,8 @@ router.get("/cadastrados", function (req, res) {
 router.get("/countFrida", function (req, res) {
     usuarioController.countFrida(req, res);
 })
-router.get("/countMichelangelo", function (req, res) {
-    usuarioController.countMichelangelo(req, res);
+router.get("/countMonet", function (req, res) {
+    usuarioController.countMonet(req, res);
 })
 // router.get("/numeroUsuario", function (req, res) {
 //     usuarioController.numeroUsuario(req, res);

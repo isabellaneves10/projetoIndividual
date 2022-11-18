@@ -39,7 +39,7 @@
 
 <div id="mensagem">
     <div class="container">
-        <p> Que bom te ver por aqui !<br>
+        <p> Que bom te ver por aqui <b  style="font-weight: 1000;" id="nome"></b> !<br>
             você quer indicações de outros artistas ou desenhar no quadro ?
         </p>
 
@@ -90,7 +90,8 @@
 
     //         });
     
-    msg_numero_usuario.innerHTML = `Número de usuário é : ${sessionStorage.id_usuario} `
+    msg_numero_usuario.innerHTML = `Usuário : ${sessionStorage.id_usuario} `
+    nome.innerHTML = `${sessionStorage.nome_usuario} `
      }
     
     

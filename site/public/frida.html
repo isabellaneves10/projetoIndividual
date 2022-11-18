@@ -10,13 +10,83 @@
 </head>
 <body onload="grafico()">
 
-    <div id="alo" ></div>
+    <div class="header">
+        <div class="container">
 
+
+            <li>
+                <div id="msg_numero_usuario"></div>
+            </li>
+            <ul>
+
+                <li> <a class="ref" href="menu.html">Menu</a></li>
+                <li>|</li>
+                <li>
+                    <a id="conta" href="entrar.html">Logout</a>
+                </li>
+            </ul>
+
+
+        </div>
+    </div>
+
+    <div class="conteudo" >
+        <h1>Indicação : Frida Kahlo</h1>
+        <div class="container" >
+
+            <img src="./imgs/frida.jpg">
+
+            <p>Frida Kahlo (1907-1954) foi uma pintora mexicana conhecida por seus autorretratos de inspiração surrealista e também por suas fotografias.</p>
+          
+
+           </div>
+        </div>
+  
+
+        
+        <div class="obras">
+            <div class="container">
+                <div id="h1_obras">
+                    <h2 class="span_titulos" >Obras mais famosas </h2> 
+                </div>
+
+                <div class="carrossel">
+
+                    <ul>
+                        <li> <img src="imgs/leito2.frida.png"> </li>
+
+                        <li> <img src="imgs/cervo.frida.png"> </li>
+
+                        <li> <img src="imgs/leito.frida.png"> </li>
+
+                        <li> <img src="imgs/duas.frida.png"> </li>
+
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+        </div>
    
     <div class="grafic" >
-        <h1>Indicação</h1>
-        <canvas id="myChart2"></canvas>
+        <h1>As pesoas gostaram mais </h1>
+        <div class="container">
+            <canvas id="myChart2"></canvas>
+
+        </div>
       </div>
+
+
+
+      <div class="footer">
+        <div class="container">
+            <h2>Art by Vincent</h2>
+            <p>desenvolvido por Isabella Neves</p>
+
+        </div>
+    </div>
 
 </body>
 </html>
@@ -24,7 +94,7 @@
 <script>
     function grafico() {
 
-        fetch(`/usuarios/countMichelangelo`)
+        fetch(`/usuarios/countMonet`)
             
             .then(function (resposta) {
                 if (resposta.ok) {
@@ -35,9 +105,9 @@
 
                     resposta.json().then(function (resposta) {
 
-                        var countMichelangelo = resposta[0].countMichelangelo
-                        sessionStorage.countMichelangelo = countMichelangelo
-                        // alo.innerHTML = `alo michelangelo ${countMichelangelo} `
+                        var countMonet = resposta[0].countMonet
+                        sessionStorage.countMonet = countMonet
+                        // alo.innerHTML = `alo monet ${countMonet} `
                         console.log("Dados recebidos: ", JSON.stringify(resposta));
                     });
                 } else {
@@ -48,9 +118,8 @@
 
             });
 
-    }
-
-        fetch(`/usuarios/countFrida`)
+            
+            fetch(`/usuarios/countFrida`)
             
             .then(function (resposta) {
                 if (resposta.ok) {
@@ -75,12 +144,12 @@
 
             });
 
+            
+        }
+
         
     
-</script>
 
-
-<script>
     // const labels = [
     //   '12:00',
     //   '13:00',
@@ -92,7 +161,7 @@
 
     const labels2 = [
       'Frida', 
-      'Michelangelo'
+      'Monet'
    
       
     ];
@@ -122,13 +191,13 @@
         label: 'indicação',
         backgroundColor: '#00ffee',
         // borderColor: 'rgb(196,1 , 8)',
-        data: [sessionStorage.countFrida , sessionStorage.countMichelangelo],
+        data: [sessionStorage.countFrida , sessionStorage.countMonet],
     //   },
     //   {
-    //     label: 'Michelangelo',
+    //     label: 'Monet',
     //     backgroundColor: 'rgb(135, 206, 235)',
     //     borderColor: 'rgb(135, 206, 235)',
-    //     data: [sessionStorage.countMichelangelo],
+    //     data: [sessionStorage.countMonet],
       }]
     };
   
