@@ -139,8 +139,8 @@ li:hover {
     
 }
 
-.conteudo button{
-    /* border: solid 3px deeppink; */
+/* .conteudo button{
+    border: solid 3px deeppink;
     width: 30%;
     font-size: 1.5vw;
     padding: 1%;
@@ -149,6 +149,30 @@ li:hover {
     border-radius: 15px;
     margin: 5px;
 
+} */
+
+.conteudo button {
+    border: solid 3px #09054400;
+    background-color: #090544;
+    border-radius: 15px;
+    color: white;
+    transition: all 0.4s;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-left: 45%;
+
+    width: 30%;
+    font-size: 1vw;
+    padding: 1%;
+    margin: 5px;
+
+    
+}
+
+
+.conteudo button:hover {
+    background: #00FFF0;
+    color: black;
 }
 .conteudo .img{
     /* border: solid rgb(17, 196, 212) 5px; */

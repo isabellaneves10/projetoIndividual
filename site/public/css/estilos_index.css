@@ -97,7 +97,8 @@ body {
 .header li {
     /* border: solid 3px rgb(75, 37, 8); */
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.6vw;
+    font-weight: 600;
+    font-size: 1.2vw;
     padding: 5px;
     transition: all .2s;
 }
@@ -425,7 +426,7 @@ li:hover {
 }
 
 .todasObras button {
-    border: solid 3px #090544;
+    border: solid 3px #09054400;
     background-color: #090544;
     border-radius: 15px;
     padding: 1% 2%;
@@ -446,6 +447,7 @@ li:hover {
 
 .todasObras button:hover {
     background: #00FFF0;
+    color: #000000;
 }
 
 /* .imagens_obras {

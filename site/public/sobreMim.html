@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art by Vincent</title>
+    <link rel="stylesheet" href="./css/estilos_sobreMim.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/logo.png">
+
+</head>
+
+<body>
+
+
+    <div class="header">
+        <div class="container">
+
+            <h1 id="primeiroH1">Art by vincent</h1>
+            <ul>
+                <li> <a class="ref" href="index.html"> Arte </a> </li>
+                <li id="aqui"> Sobre mim </li>
+                <li> <a class="ref" href="entrar.html">Entrar</a></li>
+                <li> <a class="ref" href="cadastro.html"> Cadastro </a> </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <!-- <div class="banner" >
+    <div class="container" >
+      
+    </div>
+</div> -->
+
+<div class="sobre" >
+   <div class="container" >
+    <h1>Prazer , me chamo Isabella, é muito bom te ver por aqui! ❤</h1>
+      <p>Eu sou a autora desse site e vou contar pra você o que a arte significa pra mim. 
+        <br>
+        <br>
+        A arte em forma de pintura entrou na minha vida através das obras de Van Gogh em torno de 2015 
+        e foi de extrema importância, pois eu comecei a desenvolver um senso crítico e um olhar diferente sobre as coisas , as pessoas , os lugares, as coisas , ou seja , sobre tudo . 
+         <br>
+         <br>
+         Percebo hoje que nada é somente o que podemos ver , e na arte é assim. O artista faz a obra olhando de uma determinada perspectiva mas a interpretação das pessoas pode ser a mais variada possível , isso me intriga e me faz ver que sempre tem um novo caminho pra trilhar , outras coisas pra ver , outras pessoas pra conhcer , enfim ,  novos mundos .
+        <br>
+        <br>
+        Arte é tecnologia , é informação , é beleza , é liberdade , é política , afinal a arte está em tudo , só depende do modo que você vê as coisas , isso me move e me faz bem ! </p>
+   </div>
+</div>
+
+
+
+
+    </div>
+    
+    <div class="galeria">
+        <div class="container">
+            <div id="img"><img style="width: 25vw;" src="./imgs/isabella7.png"></div>
+        </div>
+        <button onclick="proximo()">Próximo</button>
+    </div>
+
+
+    <div class="exposicoes">
+        <div class="container">
+            <h3>Quer indicações de exposições e museus ?
+                <select id="opcoes">
+                    <option value="0">Selecione a quantidade de indicações</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+    
+                <button onclick="mostrar()">Mostrar</button>
+    
+                <div id="msg2" ></div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="container">
+            <h2>Art by Vincent</h2>
+            <p>desenvolvido por Isabella Neves</p>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+    var exposicoes = ['1. Sescs', '2. Pinacoteca',
+        '3. CCSP(centro cultural de são paulo)',
+        '4. Farol Santander', '5. MAC(museu de arte comtemporânea)']
+
+    var imagens = ['<img style="width: 25vw;" src="imgs/isabella1.jpg" >',
+    '<img style="width: 25vw;" src="imgs/isabella3.png" >',
+    '<img style="width: 25vw;" src="imgs/isabella2.png" >',
+        '<img style="width: 25vw;" src="imgs/isabella4.png" >',
+        '<img style="width: 25vw;" src="./imgs/isabella5.png">',
+        '<img style="width: 25vw;" src="./imgs/isabella6.png">',
+        '<img style="width: 25vw;" src="./imgs/isabella7.png">'
+    ]
+
+    var cont = 0
+
+    function proximo() {
+
+
+        if (cont == 0) {
+
+            img.innerHTML = `${imagens[cont]}`
+
+        }
+        if (cont == 1) {
+
+            img.innerHTML = `${imagens[cont]}`
+        }
+        if (cont == 2) {
+
+            img.innerHTML = `${imagens[cont]}`
+        }
+        if (cont == 3) {
+
+            img.innerHTML = `${imagens[cont]}`
+
+        }
+        if (cont == 4) {
+
+            img.innerHTML = `${imagens[cont]}`
+
+        }
+        if (cont == 5) {
+
+            img.innerHTML = `${imagens[cont]}`
+
+        }
+
+        if (cont == 6) {
+
+            img.innerHTML = `${imagens[cont]}`
+            cont = 0
+        }
+
+
+
+
+        cont++
+
+    }
+
+
+    function mostrar() {
+
+        msg2.innerHTML = `` 
+
+        var cont = 0
+        var opcoes_ = Number(opcoes.value)
+
+        if (opcoes.value != '0') {
+            
+            
+            while (cont <= opcoes_ - 1) {
+                
+                msg2.innerHTML += `<br>${exposicoes[cont]}`
+                
+                cont++
+                
+            }
+            
+        }else{alert('selecione uma quantidade')}
+    }
+
+</script>

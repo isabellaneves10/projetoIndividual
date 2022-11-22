@@ -6,13 +6,15 @@ body {
     background-color: #ffffff;
     background-image: url(../imgs/vetor.body.png);
     /* color: black; */
-
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 }
 
 .container {
     width: 80%;
     margin: auto;
 }
+
 
 #primeiroH1 {
     /* border: white solid 3px; */
@@ -108,14 +110,19 @@ li:hover {
     padding: 2%;
 }
 /*///////////////// frida ////////////////*/
+
+
 .conteudo{
     text-align: center;
+    /* margin-top: 5%; */
+    margin-bottom: 5%;
 }
 
 .conteudo .container{
-    border: #00FFF0 solid 3px ;
+    /* border: #00FFF0 solid 3px ; */
     display: flex;
     align-items: center;
+
 }
 
 .conteudo .container img{
@@ -124,6 +131,9 @@ li:hover {
 .conteudo .container p{
     font-size: 2vw;
     text-align: center;
+}
+.conteudo h1{
+    padding: 3%;
 }
 
 /*/////////////////////// obras ///////////////////*/
@@ -242,4 +252,9 @@ li:hover {
     /* border: #bd2727 solid 3px; */
     margin: 0;
     padding: 0;
+}
+
+
+#msg_numero_usuario{
+    color: white;
 }

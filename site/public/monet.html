@@ -1,31 +1,118 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art by Vincent</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/logo.png">
     <link rel="stylesheet" href="./css/estilos_monet.css">
 </head>
-<body onload="grafico()">
 
-    <div id="alo" ></div>
+<body onload="grafico() ; numeroCadastro() ">
 
-   
-    <div class="grafic" >
-        <h1>Indicação</h1>
-        <canvas id="myChart2"></canvas>
-      </div>
+
+
+    <div class="header">
+        <div class="container">
+
+
+            <li>
+                <div id="msg_numero_usuario"></div>
+            </li>
+            <ul>
+
+                <li> <a class="ref" href="menu.html">Menu</a></li>
+                <li>|</li>
+                <li>
+                    <a id="conta" href="entrar.html">Logout</a>
+                </li>
+            </ul>
+
+
+        </div>
+    </div>
+
+    <div class="conteudo">
+        <h1>Indicação : Claude Monet</h1>
+        <div class="container">
+
+            <img src="./imgs/Claude.png">
+
+            <p>Claude Monet (1840-1926) foi um pintor francês considerado um dos mais importantes pintores da Escola
+                Impressionista. O termo impressionista surgiu durante uma exposição realizada em 1874, quando o quadro
+                de Monet, "Impressão, Nascer do Sol", foi criticado por retratar a “impressão” de uma cena e não a
+                realidade. </p>
+
+
+        </div>
+    </div>
+
+
+
+    <div class="obras">
+        <div class="container">
+            <div id="h1_obras">
+                <h2 class="span_titulos">Obras mais famosas</h2>
+            </div>
+
+            <div class="carrossel">
+
+                <ul>
+                    <li> <img src="imgs/obra.monet.png"> </li>
+
+                    <li> <img src="imgs/obra2.monet.png"> </li>
+
+                    <li> <img src="imgs/obra3.monet.png
+                            "> </li>
+
+                    <li> <img src="imgs/obra4.monet.png"> </li>
+
+
+                </ul>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="grafic">
+        <h1>As pesoas gostaram mais </h1>
+        <div class="container">
+            <canvas id="myChart2"></canvas>
+
+        </div>
+    </div>
+
+
+    
+    <div class="footer">
+        <div class="container">
+            <h2>Art by Vincent</h2>
+            <p>desenvolvido por Isabella Neves</p>
+
+        </div>
+    </div>
 
 </body>
+
 </html>
 
 <script>
+    
+            function numeroCadastro() {
+    
+                msg_numero_usuario.innerHTML = `Usuário : ${sessionStorage.id_usuario} `
+    
+            }
+
     function grafico() {
 
         fetch(`/usuarios/countMonet`)
-            
+
             .then(function (resposta) {
                 if (resposta.ok) {
                     if (resposta.status == 204) {
@@ -37,7 +124,40 @@
 
                         var countMonet = resposta[0].countMonet
                         sessionStorage.countMonet = countMonet
-                        // alo.innerHTML = `alo monet ${countMonet} `
+
+                        grafico2()
+
+                        console.log("Dados recebidos: ", JSON.stringify(resposta));
+                    });
+                } else {
+                    throw ('Houve um erro na API!');
+                }
+            }).catch(function (resposta) {
+                console.error(resposta);
+
+            });
+    }
+
+    function grafico2() {
+
+
+        fetch(`/usuarios/countFrida`)
+        
+        .then(function (resposta) {
+            if (resposta.ok) {
+                    if (resposta.status == 204) {
+
+                        throw "Nenhum resultado encontrado!!";
+                    }
+
+                    resposta.json().then(function (resposta) {
+
+                        var countFrida = resposta[0].countFrida
+                        sessionStorage.countFrida = countFrida
+
+                        
+                        grafico3()
+
                         console.log("Dados recebidos: ", JSON.stringify(resposta));
                     });
                 } else {
@@ -50,118 +170,91 @@
 
     }
 
-        fetch(`/usuarios/countFrida`)
-            
-            .then(function (resposta) {
-                if (resposta.ok) {
-                    if (resposta.status == 204) {
-
-                        throw "Nenhum resultado encontrado!!";
-                    }
-
-                    resposta.json().then(function (resposta) {
-
-                        
-                        var countFrida = resposta[0].countFrida
-                        sessionStorage.countFrida = countFrida
-                        // alo.innerHTML += `alo Frida ${countFrida} `
-                        console.log("Dados recebidos: ", JSON.stringify(resposta));
-                    });
-                } else {
-                    throw ('Houve um erro na API!');
-                }
-            }).catch(function (resposta) {
-                console.error(resposta);
-
-            });
-
-        
-
-    // const labels = [
-    //   '12:00',
-    //   '13:00',
-    //   '14:00',
-    //   '15:00',
-    //   '16:00',
-    //   '17:00',
-    // ];
-
-    const labels2 = [
-      'Frida', 
-      'Monet'
-   
-      
-    ];
-    
-  
-    // const data = {
-    //   labels: labels,
-    //   datasets: [{
-    //     label: 'Temperatura',
-    //     backgroundColor: 'rgb(196,1 , 8)',
-    //     borderColor: 'rgb(196,1 , 8)',
-    //     data: [30, 29, 28, 25, 22, 23],
-    //   },
-    //   {
-    //     label: 'Umidade',
-    //     backgroundColor: 'rgb(135, 206, 235)',
-    //     borderColor: 'rgb(135, 206, 235)',
-    //     data: [80, 82, 80, 85, 80, 83],
-    //   }
-    // ]
-    // };
-
-    const data2 = {
-      labels: labels2,
-      datasets: [{
-
-        label: 'indicação',
-        backgroundColor: '#00ffee',
-        // borderColor: 'rgb(196,1 , 8)',
-        data: [sessionStorage.countFrida , sessionStorage.countMonet],
-    //   },
-    //   {
-    //     label: 'Michelangelo',
-    //     backgroundColor: 'rgb(135, 206, 235)',
-    //     borderColor: 'rgb(135, 206, 235)',
-    //     data: [sessionStorage.countMichelangelo],
-      }]
-    };
-  
-    // const config = {
-    //   type: 'line',
-    //   data: data,
-    //   options: {}
-    // };
 
 
-    const configg = {
-      type: 'bar',
-      data: data2,
-      options: {}
-    };
-  </script>
+    function grafico3() {
 
-<script>
-    // const myChart = new Chart(
-    //   document.getElementById('myChart'),
-    //   config
-    // );
 
-    const myChart2 = new Chart(
-      document.getElementById('myChart2'),
-      configg
-    );
 
-  </script>
+        // const labels = [
+        //   '12:00',
+        //   '13:00',
+        //   '14:00',
+        //   '15:00',
+        //   '16:00',
+        //   '17:00',
+        // ];
+
+        const labels2 = [
+            'Frida',
+            'Monet'
+
+
+        ];
+
+
+        // const data = {
+        //   labels: labels,
+        //   datasets: [{
+        //     label: 'Temperatura',
+        //     backgroundColor: 'rgb(196,1 , 8)',
+        //     borderColor: 'rgb(196,1 , 8)',
+        //     data: [30, 29, 28, 25, 22, 23],
+        //   },
+        //   {
+        //     label: 'Umidade',
+        //     backgroundColor: 'rgb(135, 206, 235)',
+        //     borderColor: 'rgb(135, 206, 235)',
+        //     data: [80, 82, 80, 85, 80, 83],
+        //   }
+        // ]
+        // };
+
+        const data2 = {
+            labels: labels2,
+            datasets: [{
+
+                label: 'indicação',
+                backgroundColor: '#00ffee',
+                // borderColor: 'rgb(196,1 , 8)',
+                data: [sessionStorage.countFrida, sessionStorage.countMonet],
+                //   },
+                //   {
+                //     label: 'Monet',
+                //     backgroundColor: 'rgb(135, 206, 235)',
+                //     borderColor: 'rgb(135, 206, 235)',
+                //     data: [sessionStorage.countMonet],
+            }]
+        };
+
+        // const config = {
+        //   type: 'line',
+        //   data: data,
+        //   options: {}
+        // };
+
+
+        const configg = {
+            type: 'bar',
+            data: data2,
+            options: {}
+        };
+
+
+        // const myChart = new Chart(
+        //   document.getElementById('myChart'),
+        //   config
+        // );
+
+        const myChart2 = new Chart(
+            document.getElementById('myChart2'),
+            configg
+
+        );
 
 
 
 
+    }
 
-
-
-
-
-
-
+</script>
