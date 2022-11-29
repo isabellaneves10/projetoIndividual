@@ -150,15 +150,6 @@ li:hover {
     padding: 0;
 }
 
-.obras .container {
-    /* border: #00FFF0 solid 3px; */
-    /* width: 90%; */
-}
-
-.obras {
-    /* border: #ff09b5 solid 3px; */
-    /* width: 90%; */
-}
 
 .carrossel {
     width: 65.5vw;
@@ -167,8 +158,6 @@ li:hover {
     margin: 15px auto 25px auto;
     padding: 0 0 0 0.4%;
 
-    /* box-shadow: -15px 5px 25px #090544c7; */
-    /* overflow: hidden; */
 }
 
 .carrossel ul {
@@ -179,8 +168,7 @@ li:hover {
     list-style: none;
     padding: 0;
     margin: 0;
-    /* width: 600vw;
-    height: 600vw; */
+    
 }
 
 .carrossel li {
@@ -211,7 +199,6 @@ li:hover {
 
 .footer {
     /* border: rgb(255, 238, 2) solid 3px; */
-    /* background: linear-gradient(to bottom, #00ffee30, #00ffee0c); */
     background-color: black;
     height: auto;
     color: white;
@@ -231,14 +218,10 @@ li:hover {
 
 .footer h2 {
     /* border: solid 3px indianred; */
-    /* padding-top: 1%; */
     margin: 0%;
 }
 
 .footer p {
-    /* padding-bottom: 1%; */
-    /* border: solid 3px indianred; */
-    /* margin: 1%; */
     margin: 0%;
 }
 

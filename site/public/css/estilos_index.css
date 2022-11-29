@@ -107,77 +107,17 @@ li:hover {
     transform: scale(1.1);
 }
 
-/*//////////////////////////////// conteudo /////////////////////////*/
-/* 
-.conteudo {
-    margin-top: 100px;
-    margin-bottom: 100px;
-
-}
-
-.conteudo .container {
-    border: solid 3px white;
-    display: flex;
-    height: auto;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.conteudo .historia {
-    border: solid 3px indigo;
-    width: 40%;
-    height: 40%;
-}
-
-.historia p {
-    border: solid 3px tomato;
-    text-align: justify;
-    color: white;
-    font-size: 1.8vw;
-
-}
-
-.historia button {
-    text-align: center;
-    border: #00ffee82;
-    color: #100F10;
-    font-size: 1.4vw;
-    width: 34%;
-    background-color: #00ffee82;
-    border-radius: 15px;
-    transition: all .4s;
-
-
-}
-
-.conteudo img {
-    border: solid 3px rgb(91, 130, 0);
-    width: 40%;
-    height: 100%;
-
-} */
 
 /*///////////////////////////////////// vanGogh///////////////////////////////////*/
 
 
 .vanGogh .container {
 
-    /* border-image: linear-gradient(#00ffee, #090544) 30;  */
-    /* border-width: 5px; 
-    border-style: solid ; */
-    /* background-color: rgba(0, 0, 0, 0.959); */
     background-image: url(../imgs/banner.van.png);
-    /* background-attachment: fixed; */
-    /* background-attachment: scroll; */
     display: flex;
     align-items: center;
-    /* justify-content: space-around; */
-    /* padding-top: 0.5%; */
-    /* padding-bottom: 0.5%;  */
     margin-bottom: 50px;
     margin-top: 50px;
-    /* width: 70%;
-    width: 70%; */
     background-position: center;
     height: 35vw;
 
@@ -185,18 +125,10 @@ li:hover {
 }
 
 
-
-/* button:hover {
-    transform: scale(1.1);
-} */
-
 .vanGogh_historiac {
     /* border: solid rgb(13, 179, 27) 3px; */
     text-align: center;
     justify-items: center;
-    /* margin: 0 15vw 0 1vw; */
-    /* justify-content: space-around; */
-    /* padding: 4% 0 4% 0; */
     width: 50%;
 
 
@@ -223,9 +155,7 @@ li:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* margin: 0 1vw 0 15vw; */
-    /* padding: 0 2% 0 2%; */
-
+   
 
 }
 
@@ -237,17 +167,6 @@ li:hover {
     font-weight: 600;
 }
 
-/* .vanGogh_historiac button {
-    text-align: center;
-    border: #090544 1px solid;
-    color: white;
-    font-size: 1vw;
-    width: 26%;
-    background-color: #5ae7dd00;
-    border-radius: 15px;
-    transition: all .4s;
-
-} */
 
 .modal {
     position: fixed;
@@ -269,9 +188,6 @@ li:hover {
     font-weight: 600;
 }
 
-/* .modal :hover {
-    transform: scale(1.1);
-} */
 
 .modal p {
     font-size: 1.2vw;
@@ -325,15 +241,6 @@ li:hover {
     padding: 0;
 }
 
-.obras .container {
-    /* border: #00FFF0 solid 3px; */
-    /* width: 90%; */
-}
-
-.obras {
-    /* border: #ff09b5 solid 3px; */
-    /* width: 90%; */
-}
 
 .carrossel {
     width: 65.5vw;
@@ -450,128 +357,6 @@ li:hover {
     color: #000000;
 }
 
-/* .imagens_obras {
-    border: solid 3px indigo;
-    display: flex; 
-    justify-content: space-around;
-    padding-top: 3%;
-    padding-bottom: 0.5%; 
-
-} */
-
-/* .imagens_obras img {
-    border: solid 3px rgb(214, 19, 19);
-    width: 35%; 
-    
-}
-    */
-
-
-/* .texto {
-    border: solid rgb(77, 255, 0) 3px;
-    color: black;
-    width: 40%;
-    font-size: 1.8vw;
-    
-} */
-/* .imagens_obras .legenda1:hover {
-    transform: scale(1.1);
-}
-.imagens_obras .legenda2:hover {
-    transform: scale(1.1);
-}
-.imagens_obras .legenda3:hover {
-    transform: scale(1.1);
-}
-.imagens_obras .legenda4:hover {
-    transform: scale(1.1);
-}
-.imagens_obras .legenda5:hover {
-    transform: scale(1.1);
-}
-.imagens_obras .legenda6:hover {
-    transform: scale(1.1);
-} */
-
-/* .legenda1 {
-    border: solid rgb(206, 90, 128) 3px;
-    background-color: #9dbcbc;
-    border-radius: 15px;
-    padding: 2% 0 2% 0;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    align-items: center;
-    transition: all .4s;
-} */
-/* .legenda2 {
-    border: solid rgb(206, 90, 128) 3px;
-    padding: 0 0 0 4%;
-    background-color: #8acbb5;
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    align-items: center;
-    padding: 2% 0 2% 0;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    transition: all .4s;
-} */
-/* .legenda3 {
-    border: solid rgb(206, 90, 128) 3px;
-    padding: 0 0 0 4%;
-    background-color: #f7e9aa;
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    align-items: center;
-    padding: 2% 0 2% 0;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    transition: all .4s;
-} */
-/* .legenda4 {
-    border: solid rgb(206, 90, 128) 3px;
-    padding: 0 0 0 4%;
-    background-color: #eb9d8d;
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    align-items: center;
-    padding: 2% 0 2% 0;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    transition: all .4s;
-}
-.legenda5 {
-    border: solid rgb(206, 90, 128) 3px;
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #c7b299;
-    padding: 2% 0 2% 0;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    transition: all .4s;
-    padding: 0 0 0 4%;
-} */
-/* .legenda6 {
-    border: solid rgb(206, 90, 128) 3px;
-    padding: 0 0 0 4%;
-    background-color: #b998b3;
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    align-items: center;
-    padding: 2% 0 2% 0;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    transition: all .4s;
-} */
-
 
 /*//////////////////////// somos ///////////////////////////////*/
 #ja_somos {
@@ -639,10 +424,7 @@ li:hover {
 }
 
 .cartas .container {
-    /* border-image: linear-gradient(#00ffee82, #160c9f5d) 30;
-    border-width: px;
-    border-style: solid; */
-    /* background-color: #00ffee6c; */
+   
     display: flex;
     align-items: center;
     padding-top: 2%;
@@ -715,9 +497,7 @@ li:hover {
 }
 
 .footer p {
-    /* padding-bottom: 1%; */
-    /* border: solid 3px indianred; */
-    /* margin: 1%; */
+  
     margin: 0%;
 }
 

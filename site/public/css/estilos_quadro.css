@@ -86,11 +86,10 @@ body {
 }
 
 /*//////////////////////////// footer //////////////////*/
-/*//////////////////////////// footer //////////////////*/
+
 
 .footer {
     /* border: rgb(255, 238, 2) solid 3px; */
-    /* background: linear-gradient(to bottom, #00ffee30, #00ffee0c); */
     background-color: black;
     height: auto;
     color: white;
@@ -109,27 +108,24 @@ body {
 }
 
 .footer h2 {
-    /* border: solid 3px indianred; */
-    /* padding-top: 1%; */
+   
     margin: 0%;
 }
 
 .footer p {
-    /* padding-bottom: 1%; */
-    /* border: solid 3px indianred; */
-    /* margin: 1%; */
+    
     margin: 0%;
 }
 
 /*//////////////// títulos //////////////////*/
 .span_titulos {
-    /* color: white; */
+ 
+    /* border: #bd2727 solid 3px; */
     font-size: 8vw;
     text-align: center;
     font-family: 'Shalimar', cursive;
     font-weight: 20;
-    /* border: #bd2727 solid 3px; */
     margin: 0;
     padding: 0;
-    /* color: white; */
+   
 }

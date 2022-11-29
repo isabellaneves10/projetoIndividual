@@ -139,17 +139,6 @@ li:hover {
     
 }
 
-/* .conteudo button{
-    border: solid 3px deeppink;
-    width: 30%;
-    font-size: 1.5vw;
-    padding: 1%;
-    color: white;
-    background-color: #090544;
-    border-radius: 15px;
-    margin: 5px;
-
-} */
 
 .conteudo button {
     border: solid 3px #09054400;
@@ -213,9 +202,7 @@ li:hover {
 }
 
 .footer p {
-    /* padding-bottom: 1%; */
-    /* border: solid 3px indianred; */
-    /* margin: 1%; */
+   
     margin: 0%;
 }
 

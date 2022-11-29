@@ -161,11 +161,7 @@ li:hover {
 
 .exposicoes .container{
     /* border: #00FFF0 solid 3px; */
-    /* display: flex; */
     justify-content: center;
-    /* align-items: center; */
-    /* text-align: center; */
-    /* flex-direction: column; */
     font-size: 1.5vw;
     
     
@@ -215,14 +211,11 @@ li:hover {
 }
 
 .footer h2 {
-    /* border: solid 3px indianred; */
-    /* padding-top: 1%; */
+    /* border: solid 3px i  /* padding-top: 1%; */
     margin: 0%;
 }
 
 .footer p {
-    /* padding-bottom: 1%; */
-    /* border: solid 3px indianred; */
-    /* margin: 1%; */
+   
     margin: 0%;
 }
