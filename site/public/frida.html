@@ -162,18 +162,7 @@ function numeroCadastro() {
             
 
 function grafico3() {
-    
-    
-    
-    // const labels = [
-    //   '12:00',
-    //   '13:00',
-    //   '14:00',
-    //   '15:00',
-    //   '16:00',
-    //   '17:00',
-    // ];
-
+  
     const labels2 = [
       'Frida', 
       'Monet'
@@ -181,46 +170,23 @@ function grafico3() {
       
     ];
     
-  
-    // const data = {
-    //   labels: labels,
-    //   datasets: [{
-    //     label: 'Temperatura',
-    //     backgroundColor: 'rgb(196,1 , 8)',
-    //     borderColor: 'rgb(196,1 , 8)',
-    //     data: [30, 29, 28, 25, 22, 23],
-    //   },
-    //   {
-    //     label: 'Umidade',
-    //     backgroundColor: 'rgb(135, 206, 235)',
-    //     borderColor: 'rgb(135, 206, 235)',
-    //     data: [80, 82, 80, 85, 80, 83],
-    //   }
-    // ]
-    // };
+
+    var frida = Number(sessionStorage.countFrida)
+    var monet = Number(sessionStorage.countMonet)
+    var cemPorcento = frida + monet 
+    var pocentagemFrida = ((frida * 100 ) / cemPorcento).toFixed(2)
+    var pocentagemMonet = ((monet * 100 ) / cemPorcento).toFixed(2)
     
     const data2 = {
       labels: labels2,
       datasets: [{
 
-        label: 'indicação',
+        label: 'indicação em porcentagem (%)',
         backgroundColor: '#00ffee',
-        // borderColor: 'rgb(196,1 , 8)',
-        data: [sessionStorage.countFrida , sessionStorage.countMonet],
-    //   },
-    //   {
-    //     label: 'Monet',
-    //     backgroundColor: 'rgb(135, 206, 235)',
-    //     borderColor: 'rgb(135, 206, 235)',
-    //     data: [sessionStorage.countMonet],
+        data: [pocentagemFrida , pocentagemMonet],
+    
       }]
     };
-  
-    // const config = {
-    //   type: 'line',
-    //   data: data,
-    //   options: {}
-    // };
 
 
     const configg = {
@@ -229,18 +195,10 @@ function grafico3() {
       options: {}
     };
 
-
-    // const myChart = new Chart(
-        //   document.getElementById('myChart'),
-    //   config
-    // );
-
     const myChart2 = new Chart(
         document.getElementById('myChart2'),
       configg
       );
-      
-
       
       
     }     
