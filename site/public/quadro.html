@@ -55,6 +55,7 @@
             ativo: false,
             /*diz se esta se movendo pra colorir */
             movendo: false,
+            
             pos: { x: 0, y: 0 },
             /*null pois ainda não foi criada*/
             posAnterior: null
@@ -76,7 +77,7 @@
         /*const pra desehar*/
         const desenharLinha = (linha) => {
 
-            /*inicializa a const contexto*/
+            /*inicializa a const contexto / cria um caminho*/
             contexto.beginPath();
             /*passando as coordenadas do cursor*/
             contexto.moveTo(linha.posAnterior.x, linha.posAnterior.y)
@@ -108,7 +109,7 @@
         const ciclo = () => {
 
             if (pincel.ativo && pincel.movendo && pincel.posAnterior) {
-                /*passando as duas posições pra desenhar uma linha*/
+                 /*passando as duas posições pra desenhar uma linha*/
                 desenharLinha({
                     pos: pincel.pos, posAnterior: pincel.posAnterior
                 })

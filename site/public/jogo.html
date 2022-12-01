@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art by Vincent</title>
+    <link rel="stylesheet" href="./css/estilos_jogo.css">
+</head>
+
+<body onload="aqui() ; numeroCadastro()">
+
+    <div class="header">
+        <div class="container">
+
+
+            <li>
+                <div id="msg_numero_usuario"></div>
+            </li>
+            <ul>
+
+                <li> <a class="ref" href="menu.html">Menu</a></li>
+                <li>|</li>
+                <li>
+                    <a id="conta" href="entrar.html">Logout</a>
+                </li>
+            </ul>
+
+
+        </div>
+    </div>
+
+
+    <div id="tela1">
+        <div class="container">
+            <h1>Jogo da memória</h1>
+            <h2>Quantas imagens você quer memorizar?</h2>
+            <select id="opcoes">
+                <option value="0">Selecione a quantidade de imagens</option>
+                <option value="5">5 imagens</option>
+                <option value="6">6 imagens</option>
+                <option value="7">7 imagens</option>
+                <option value="8">8 imagens</option>
+                <option value="9">9 imagens</option>
+                <option value="10">10 imagens</option>
+                <option value="11">11 imagens</option>
+                <option value="12">12 imagens</option>
+            </select>
+            <br>
+            <button onclick="jogar()">Jogar</button>
+
+        </div>
+    </div>
+
+    <div id="tela2">
+        <div class="container">
+            <!-- <h1>Jogo da memória</h1> -->
+
+            <br>
+            <div style="font-size: 1.6vw ;" id="msg">Clique mais <b id="vezes"></b> vezes para trocar as imagens !
+            </div>
+            <br>
+            <div id="msg2"><img src="./imgs/noite_estrelada.png"></div>
+            <br>
+            <button id='button_mudar' onclick="mudar()">Clique</button>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
+
+<script>
+
+    imagens = ['<img src="./imgs/amendoeira.png">',
+        '<img src="./imgs/lirios.png">',
+        '<img src="./imgs/girassois.png">',
+        '<img src="./imgs/noite_estrelada.png">',
+        '<img src="./imgs/auto_retrato.png">']
+
+    var cont = 1
+    var cont2 = 0
+    var cont3 = 0
+    var qtd = 0
+
+    function aqui() {
+
+        tela2.style.display = `none`
+
+    }
+    function numeroCadastro() {
+
+        msg_numero_usuario.innerHTML = `Usuário : ${sessionStorage.id_usuario} `
+    }
+
+
+    function jogar() {
+
+        qtd = Number(opcoes.value)
+
+        if (qtd == 0) {
+            alert('escolha uma quantidade !!!')
+
+        } else {
+
+            tela1.style.display = `none`
+            tela2.style.display = `block`
+            cont2 = qtd
+            vezes.innerHTML = `${cont2 - 1}`
+        }
+
+    }
+    function mudar() {
+        
+
+        if (cont3 == 0) {
+
+            var sorteio = Number((Math.random() * 2 + 1)).toFixed(2)
+        } else {
+
+            var sorteio = Number((Math.random())).toFixed(1)
+        }
+
+        console.log(sorteio)
+
+        if (sorteio >= 0.80) {
+
+            msg2.innerHTML = ` ${imagens[4]}`
+
+        }
+        else if (sorteio >= 0.70) {
+            msg2.innerHTML = `${imagens[3]}`
+            cont++
+
+        }
+        else if (sorteio >= 0.50) {
+            msg2.innerHTML = `${imagens[2]}`
+
+        }
+        else if (sorteio >= 0.25) {
+            msg2.innerHTML = `${imagens[1]}`
+            
+        }
+        else if (sorteio >= 0) {
+            msg2.innerHTML = `${imagens[0]}`
+            
+        }
+
+        cont3++
+        cont2--
+
+        if (cont2 == 1) {
+
+            msg.style.display = `none`
+            button_mudar.style.display = `none`
+
+
+            msg2.innerHTML = `
+            <div style="font-size: 1.6vw ;">
+            Quantas vezes esse quadro apareceu ?
+            
+            <input style="width : 80px;" placeholder = 'digite aqui' id="qtd_vezes" type="text">
+
+            <div style="display:flex ; flex-direction : column; align-items: center; justify-content: center;">
+            <br>
+            <img src="./imgs/noite_estrelada.png">
+            <br>
+            <button style="font-size: 1vw; width : 30%;" onclick="acertou()" > Ver resultado </button> 
+
+            </div>
+            </div>
+            
+            `
+
+        }
+
+        vezes.innerHTML = `${cont2 - 1}`
+
+    }
+
+
+    function acertou() {
+
+        if (qtd_vezes.value != "") {
+
+            if (qtd_vezes.value == cont) {
+
+                msg2.innerHTML = `
+            <div  style="font-size: 1.6vw ; margin-top:20% ;">
+            Parabéns , sua memória é boa , você acertou !!!
+            </div>`
+
+
+            } else {
+                msg2.innerHTML = `
+            <div style="font-size: 1.6vw ; margin-top:20% ;" >
+                Que pena , você errou , foram ${cont} vezes, mas pode tentar novamente . 
+                </div>`}
+
+            setTimeout(() => { window.location = "menu.html"; }, "2500")
+
+        } else { alert('digite a quantidade de vezes que você viu !') }
+
+    }
+
+    function block() {
+
+        tela1.style.display = `none`
+        tela2.style.display = `none`
+
+    }
+</script>

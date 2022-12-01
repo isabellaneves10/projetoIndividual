@@ -62,7 +62,7 @@
     <div class="exposicoes">
         <div class="container">
             <h3>Quer indicações de exposições e museus ?
-                <select id="opcoes">
+                <select onchange="mostrar()" id="opcoes">
                     <option value="0">Selecione a quantidade de indicações</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -71,7 +71,7 @@
                     <option value="5">5</option>
                 </select>
     
-                <button onclick="mostrar()">Mostrar</button>
+                <!-- <button onclick="mostrar()">Mostrar</button> -->
     
                 <div id="msg2" ></div>
         </div>
