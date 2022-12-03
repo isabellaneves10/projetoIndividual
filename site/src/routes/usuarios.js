@@ -38,9 +38,6 @@ router.get("/countFrida", function (req, res) {
 router.get("/countMonet", function (req, res) {
     usuarioController.countMonet(req, res);
 })
-// router.get("/numeroUsuario", function (req, res) {
-//     usuarioController.numeroUsuario(req, res);
-// })
 
 router.post("/autenticar", function (req, res) {
     usuarioController.entrar(req, res);

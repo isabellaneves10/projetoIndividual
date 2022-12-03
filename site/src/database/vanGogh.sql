@@ -49,7 +49,7 @@ Obra varchar(15)
 insert into indicacaoObra values
 ( null , 1 , 'frida'),
 ( null , 1 , 'monet');
-
+select * from usuario ;
 select * from indicacaoObra ;
 select count(idIndicacaoObra) from indicacaoObra where Obra = 'frida';
 select count(idIndicacaoObra) as countMichelangelo from indicacaoObra where Obra = 'monet';

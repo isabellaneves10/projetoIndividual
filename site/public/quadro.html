@@ -48,22 +48,22 @@
     /*o código só será executado quando todo o conteúdo tiver sido carregado */
     document.addEventListener('DOMContentLoaded', () => {
         /*chama a função*/
-
+     
         /*criar um objeto pincel , que o movimento do mouse contola*/
-        const pincel = {
+        var pincel = {
             /*se tiver ativo colore , se não não colore*/
             ativo: false,
             /*diz se esta se movendo pra colorir */
             movendo: false,
             
-            pos: { x: 0, y: 0 },
+            posAtual: { x: 0, y: 0 },
             /*null pois ainda não foi criada*/
             posAnterior: null
         }
         /*selecionar o id criado no html = tela */
-        const tela = document.querySelector('#tela');
+        var tela = document.querySelector('#tela');
         /*o contexto que é modificado não a tela */
-        const contexto = tela.getContext('2d')
+        var contexto = tela.getContext('2d')
         /*tamanho da tela*/
         tela.width = 1320;
         /*altura da tela*/
@@ -75,14 +75,14 @@
 
 
         /*const pra desehar*/
-        const desenharLinha = (linha) => {
+        function desenharLinha(linha) {
 
             /*inicializa a const contexto / cria um caminho*/
             contexto.beginPath();
             /*passando as coordenadas do cursor*/
             contexto.moveTo(linha.posAnterior.x, linha.posAnterior.y)
             /*onde eu quero as linhas*/
-            contexto.lineTo(linha.pos.x, linha.pos.y);
+            contexto.lineTo(linha.posAtual.x, linha.posAtual.y);
             /*desenha ai*/
             contexto.stroke();
 
@@ -90,34 +90,38 @@
 
 
         /*quando o mouse for clicado, está função será executada*/
-        tela.onmousedown = (evento) => { pincel.ativo = true };
+        tela.onmousedown = (evento) => 
+        { pincel.ativo = true };
         /*quando o mouse for desclicado, está função será executada*/
-        tela.onmouseup = (evento) => { pincel.ativo = false };
+        tela.onmouseup = (evento) => 
+        { pincel.ativo = false };
 
 
         /*quando o mouse se mover, está função será executada*/
+        /*pincel.posAtual.x está sendo atribuido um novo valor ao jason criado no início do script*/
         tela.onmousemove = (evento) => {
             /*aqui diz qual a posição do nosso evento*/
-            pincel.pos.x = evento.clientX
-            pincel.pos.y = evento.clientY
+            pincel.posAtual.x = evento.clientX
+            pincel.posAtual.y = evento.clientY
             pincel.movendo = true;
         }
 
         /*criando ciclo : se o pincel estiver ativo ,
          estiver se movendo e tiver a posição anterior diferente da posição atual então desenha na tela uma linha  */
 
-        const ciclo = () => {
-
+        function ciclo()
+        {
             if (pincel.ativo && pincel.movendo && pincel.posAnterior) {
                  /*passando as duas posições pra desenhar uma linha*/
-                desenharLinha({
-                    pos: pincel.pos, posAnterior: pincel.posAnterior
-                })
+                let NovaLinha = {
+                    posAtual: pincel.posAtual, posAnterior: pincel.posAnterior
+                }
+                desenharLinha(NovaLinha)
                 pincel.movendo = false;
 
             }
             /*depois que ele passar do if , as const mudam */
-            pincel.posAnterior = { x: pincel.pos.x, y: pincel.pos.y }
+            pincel.posAnterior = { x: pincel.posAtual.x, y: pincel.posAtual.y }
 
 
             /*looping do ciclo*/
