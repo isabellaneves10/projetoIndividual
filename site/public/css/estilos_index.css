@@ -3,7 +3,6 @@
 body {
     padding: 0;
     margin: 0;
-    /* background-color:  #ffffff53; */
     background-attachment: fixed;
     color: black;
     font-family: 'Montserrat', sans-serif;
@@ -58,7 +57,6 @@ body {
 
 #arte {
     /* border: solid 3px rgb(112, 218, 213); */
-    /* color: white; */
     padding: 16% 12% 18% 12%;
     text-align: center;
     font-size: 4.5vw;
@@ -161,7 +159,6 @@ li:hover {
 
 .vanGogh_historiac p {
     /* border: solid rgb(95, 38, 0) 3px; */
-    /* color: white; */
     font-size: 1.8vw;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -175,9 +172,7 @@ li:hover {
     left: 18%;
     padding: 2%;
     background-color: rgb(0, 0, 0);
-    /* opacity: 0; */
     display: none;
-    /* display: flex; */
     flex-direction: column;
     align-items: center;
     color: white;
@@ -193,11 +188,10 @@ li:hover {
     font-size: 1.2vw;
     text-align: justify;
     font-family: 'Montserrat', sans-serif;
-    /* font-weight: 600; */
+    
 }
 
 .modal:target {
-    /* opacity: 1; */
     display: flex;
     pointer-events: auto;
 
@@ -220,7 +214,6 @@ li:hover {
     text-decoration: none;
     font-size: 1vw;
     font-family: 'Montserrat', sans-serif;
-    /* font-weight: 600; */
     color: white;
     background-color: #090544;
     border-radius: 15px;
@@ -231,12 +224,11 @@ li:hover {
 /*/////////////////////////////// obras /////////////////////*/
 
 .span_titulos {
-    /* color: white; */
+    /* border: #bd2727 solid 3px; */
     font-size: 8vw;
     text-align: center;
     font-family: 'Shalimar', cursive;
     font-weight: 20;
-    /* border: #bd2727 solid 3px; */
     margin: 0;
     padding: 0;
 }
@@ -248,7 +240,6 @@ li:hover {
     outline: 3px solid #09054457;
     margin: 15px auto 25px auto;
     padding: 0 0 0 0.4%;
-
     box-shadow: -15px 5px 25px #090544c7;
     overflow: hidden;
 }
@@ -257,17 +248,15 @@ li:hover {
     /* border: solid 3px lawngreen; */
     display: flex;
     align-items: center;
-
     list-style: none;
     padding: 0;
     margin: 0;
-    /* width: 600vw;
-    height: 600vw; */
+    
 }
 
 .carrossel li {
-    padding: 1% 1% 1% 0;
     /* border: 1px solid rgb(255, 3, 3); */
+    padding: 1% 1% 1% 0;
     position: relative;
     animation: slide 18s infinite ease-out;
 }
@@ -321,9 +310,6 @@ li:hover {
 
 /*///////////////////////////////////////// button mais obras /////////////////////*/
 
-.todasObras {
-    /* border: solid 3px lawngreen; */
-}
 
 .todasObras .container {
     /* border: solid 3px rgb(38, 0, 252); */
@@ -361,7 +347,6 @@ li:hover {
 /*//////////////////////// somos ///////////////////////////////*/
 #ja_somos {
     /* border: rgb(182, 7, 176) solid 3px; */
-    /* color: white; */
     width: auto;
     height: auto;
     font-size: 4vw;
@@ -372,7 +357,7 @@ li:hover {
 .ref2 {
     text-decoration: none;
     color: white;
-    /* color: rgb(0, 0, 0); */
+   
 }
 
 #cadastre {
@@ -385,7 +370,6 @@ li:hover {
     margin-top: 2%;
     width: auto;
     transition: all .2s;
-
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 
@@ -397,9 +381,9 @@ li:hover {
 }
 
 .somos {
+    /* border: salmon solid 3px; */
     margin-top: 5%;
     margin-bottom: 5%;
-    /* border: salmon solid 3px; */
 }
 
 .somos .container {
@@ -425,11 +409,11 @@ li:hover {
 
 .cartas .container {
    
+    /* border-radius: 15px; */
     display: flex;
     align-items: center;
     padding-top: 2%;
     padding-bottom: 2%;
-    /* border-radius: 15px; */
     background-image: url(../imgs/banner.cartas.png);
     background-position: center;
     height: 28vw;
@@ -457,7 +441,6 @@ li:hover {
 }
 
 .cartas p {
-
     border: #bd2727 solid 3px;
     color: black;
     font-size: 2vw;
@@ -471,7 +454,6 @@ li:hover {
 
 .footer {
     /* border: rgb(255, 238, 2) solid 3px; */
-    /* background: linear-gradient(to bottom, #00ffee30, #00ffee0c); */
     background-color: black;
     height: auto;
     color: white;
@@ -485,14 +467,12 @@ li:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    /* margin-top: 6%; */
+    justify-content: center
 
 }
 
 .footer h2 {
     /* border: solid 3px indianred; */
-    /* padding-top: 1%; */
     margin: 0%;
 }
 
@@ -508,7 +488,6 @@ li:hover {
     align-items: center;
     justify-content: center;
     justify-content: space-around;
-    /* margin: 0; */
     padding: 2%;
 
 }
@@ -518,7 +497,6 @@ li:hover {
 }
 
 #a .indicacao .container {
-
     padding-bottom: 6%;
 }
 

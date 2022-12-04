@@ -31,14 +31,12 @@
 
         <h1 id="arte">"Não tenho certeza de nada , mas a visão das estrelas me faz sonhar"</h1>
 
-
     </div>
 
     <div class="vetor">
 
         <div class="vanGogh">
             <div class="container">
-
 
                 <div class="vanGogh_historiac">
 
@@ -91,68 +89,63 @@
         </div>
 
 
-    </div>
+        <div class="somos">
+            <div class="container">
 
+                <div id="ja_somos"> </div>
 
-    </div>
-    </div> -->
-
-    <div class="somos">
-        <div class="container">
-            <div id="ja_somos"> </div>
-
-            <div id="cadastre">
-                <a class="ref2" href="cadastro.html">Cadastre-se para pintar como Vincent Van Gogh</a>
+                <div id="cadastre">
+                    <a class="ref2" href="cadastro.html">Cadastre-se para pintar como Vincent Van Gogh</a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="obras">
-        <div class="container">
-            <div id="h1_obras">
-                <h2 class="span_titulos">Obras mais famosas </h2>
+        <div class="obras">
+            <div class="container">
+                <div id="h1_obras">
+                    <h2 class="span_titulos">Obras mais famosas </h2>
+                </div>
+
+                <div class="carrossel">
+
+                    <ul>
+                        <li> <img src="imgs/noite_estrelada.png"> </li>
+
+                        <li> <img src="imgs/girassois.png"> </li>
+
+                        <li> <img src="imgs/lirios.png"> </li>
+
+                        <li> <img src="imgs/amendoeira.png"> </li>
+
+                        <li> <img src="imgs/auto_retrato2.png"> </li>
+
+                        <li> <img src="imgs/quarto.png"> </li>
+
+
+                    </ul>
+
+                </div>
             </div>
-
-            <div class="carrossel">
-
-                <ul>
-                    <li> <img src="imgs/noite_estrelada.png"> </li>
-
-                    <li> <img src="imgs/girassois.png"> </li>
-
-                    <li> <img src="imgs/lirios.png"> </li>
-
-                    <li> <img src="imgs/amendoeira.png"> </li>
-
-                    <li> <img src="imgs/auto_retrato2.png"> </li>
-
-                    <li> <img src="imgs/quarto.png"> </li>
+        </div>
 
 
-                </ul>
+
+        <div class="todasObras">
+            <div class="container">
+
+                <button onclick="mostrarObras()">Clique aqui para ver o nome de todas as obras de Van Gogh</button>
 
             </div>
+            <div class="container">
 
-
+                <div id="mostrar_obras"></div>
+            </div>
         </div>
-    </div>
 
-
-
-    <div class="todasObras">
-        <div class="container">
-
-            <button onclick="mostrarObras()">Clique aqui para ver o nome de todas as obras de Van Gogh</button>
-
-        </div>
-        <div class="container">
-
-            <div id="mostrar_obras"></div>
-        </div>
-    </div>
 
 
     </div>
+
 
     <div id="back">
 
@@ -189,6 +182,7 @@
 
             </div>
         </div>
+    </div>
 
 </body>
 
@@ -207,18 +201,20 @@
                         throw "Nenhum resultado encontrado!!";
                     }
 
-                    resposta.json().then(function (resposta) {
-                        var qtd_cadastrados = resposta[0].qtd_cadastrados
-                        ja_somos.innerHTML = `Já somos ${qtd_cadastrados} cadastrados `
-                        console.log("Dados recebidos: ", JSON.stringify(resposta));
-                    });
+                    resposta.json().then(
+                        function (resposta) {
+                            var qtd_cadastrados = resposta[0].qtd_cadastrados
+                            ja_somos.innerHTML = `Já somos ${qtd_cadastrados} cadastrados `
+                            console.log("Dados recebidos: ", JSON.stringify(resposta));
+                        });
                 } else {
                     throw ('Houve um erro na API!');
                 }
-            }).catch(function (resposta) {
-                console.error(resposta);
+            }).catch(
+                function (resposta) {
+                    console.error(resposta);
 
-            });
+                });
 
     }
 

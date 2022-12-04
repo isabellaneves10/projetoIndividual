@@ -35,8 +35,6 @@ insert into usuario values
 (null ,'estrela' , 'estrela@email' , '123' , null),
 (null , 'vera' , 'vera@email' , '123' , null);
 
-select * from usuario;
-
 create table indicacaoObra(
 idIndicacaoObra int auto_increment,
 fkUsuario int ,
@@ -49,7 +47,12 @@ Obra varchar(15)
 insert into indicacaoObra values
 ( null , 1 , 'frida'),
 ( null , 1 , 'monet');
+
 select * from usuario ;
 select * from indicacaoObra ;
+select count(id) from usuario;
+
 select count(idIndicacaoObra) from indicacaoObra where Obra = 'frida';
 select count(idIndicacaoObra) as countMichelangelo from indicacaoObra where Obra = 'monet';
+
+
